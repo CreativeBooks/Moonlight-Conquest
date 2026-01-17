@@ -45,10 +45,10 @@ func _on_realm_selected(button):
 	# 3. Get the realm name
 	var realm_name = button.name.replace("button", "").to_lower()
 
-	# 4. Save the data to your GameManager Autoload
+	# ... (Keep your name validation and saving logic at the top) ...
+	
 	GameManager.save_player(entered_name, realm_name)
 	
-	# 5. Move to Player Two scene
-	GameManager.current_player_index = 1 
-	get_tree().change_scene_to_file("res://Regular Version/playertwo.tscn")
+	GameManager.current_player_index = 4
 	
+	get_tree().change_scene_to_file("res://Regular Version/playerfive.tscn")

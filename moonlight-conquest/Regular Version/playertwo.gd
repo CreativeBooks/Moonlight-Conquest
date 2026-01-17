@@ -14,7 +14,7 @@ func _ready():
 
 func update_ui():
 	# Update Title for current player (Player 1, Player 2, etc.)
-	title_label.text = "Player " + str(GameManager.current_player_index + 1)
+	#title_label.text = "Player " + str(GameManager.current_player_index + 1)
 	
 	# Clear the name input box for the next person
 	if name_edit:
@@ -33,22 +33,23 @@ func update_ui():
 				child.disabled = false
 				child.modulate = Color(1, 1, 1, 1) # Normal color
 
+
 func _on_realm_selected(button):
-	# 1. Create the variable (Only use 'var' once!)
+	# 1. Get the name from the input box
 	var entered_name = name_edit.text.strip_edges()
 	
-	# 2. Validation: Ensure they typed something
+	# 2. Validation
 	if entered_name == "":
-		name_edit.placeholder_text = "NAME REQUIRED!"
+		name_edit.placeholder_text = "name required!"
 		return
 
-	# 3. Get the realm name
+	# 3. Get the realm name from the button name (e.g., "airbutton" -> "air")
 	var realm_name = button.name.replace("button", "").to_lower()
 
-	# 4. Save the data to your GameManager Autoload
+	# 4. Save Player 2's data to the GameManager
+	# This adds to the realm_counts so the NEXT scene knows this realm is taken.
 	GameManager.save_player(entered_name, realm_name)
 	
-	# 5. Move to Player Two scene
-	GameManager.current_player_index = 1 
-	get_tree().change_scene_to_file("res://Regular Version/playertwo.tscn")
-	
+	# 5. CRITICAL FIX: Move to Player THREE index and scene
+	GameManager.current_player_index = 2 # 0 is P1, 1 is P2, 2 is P3
+	get_tree().change_scene_to_file("res://Regular Version/playerthree.tscn")

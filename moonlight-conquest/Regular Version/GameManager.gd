@@ -7,7 +7,7 @@ var max_players = 6
 # List your scenes here in the exact order you want them to appear
 var selection_scenes = [
 	"res://playerone.tscn",
-	"res://playertwi.tscn",
+	"res://playertwo.tscn",
 	"res://playerthree.tscn",
 	"res://playerfour.tscn",
 	"res://playerfive.tscn",

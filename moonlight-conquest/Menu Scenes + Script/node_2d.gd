@@ -12,11 +12,11 @@ func _ready() -> void:
 
 
 func _on_startbutton_pressed() -> void:
-	get_tree().change_scene_to_file("res://start.tscn")
+	get_tree().change_scene_to_file("res://Menu Scenes + Script/start.tscn")
 
 
 func _on_optionsbutton_pressed() -> void:
-	get_tree().change_scene_to_file("res://options.tscn")
+	get_tree().change_scene_to_file("res://Menu Scenes + Script/options.tscn")
 
 
 func _on_exitbutton_pressed() -> void:

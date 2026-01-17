@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bw87bfuw4f84l" path="res://images/water.png" id="8_ank4q"]
 [ext_resource type="Texture2D" uid="uid://c5mbxyiwoky0c" path="res://images/time.png" id="9_iioxc"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0crjc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_po2j6"]
 texture = ExtResource("2_abqa3")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -2063,14 +2063,16 @@ texture = ExtResource("2_abqa3")
 
 [sub_resource type="TileSet" id="TileSet_bujna"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_0crjc")
+sources/0 = SubResource("TileSetAtlasSource_po2j6")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bujna"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1qeo"]
 bg_color = Color(1, 1, 1, 1)
 
-[node name="Regular" type="Node2D"]
+[node name="Regular" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_po2j6")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -2079,6 +2081,7 @@ tile_set = SubResource("TileSet_bujna")
 
 [node name="Label2" type="Label" parent="."]
 material = SubResource("ShaderMaterial_bujna")
+layout_mode = 0
 offset_left = 431.0
 offset_right = 714.0
 offset_bottom = 176.0
@@ -2089,66 +2092,76 @@ theme_override_font_sizes/font_size = 74
 text = "Player One"
 
 [node name="name" type="LineEdit" parent="."]
+layout_mode = 0
 offset_left = 434.0
 offset_top = 188.0
 offset_right = 726.0
 offset_bottom = 254.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_8b0y6")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_y1qeo")
 placeholder_text = " Enter your name"
 
-[node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 55.0
-offset_top = 374.0
-offset_right = 1096.0
-offset_bottom = 588.0
+[node name="airbutton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(160, 210)
+layout_mode = 0
+offset_left = 63.0
+offset_top = 347.0
+offset_right = 223.0
+offset_bottom = 557.0
+texture_normal = ExtResource("4_xqn0w")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="airbutton" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
+[node name="dreambutton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 347.0
+offset_right = 399.0
+offset_bottom = 557.0
+texture_normal = ExtResource("5_mgmts")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Air" type="Sprite2D" parent="GridContainer/airbutton"]
-position = Vector2(81, 109)
-scale = Vector2(0.5448276, 0.5072464)
-texture = ExtResource("4_xqn0w")
+[node name="earthbutton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(160, 210)
+layout_mode = 0
+offset_left = 414.0
+offset_top = 345.0
+offset_right = 574.0
+offset_bottom = 555.0
+texture_normal = ExtResource("6_alv65")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="dreambutton" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
+[node name="firebutton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 589.0
+offset_top = 345.0
+offset_right = 749.0
+offset_bottom = 555.0
+texture_normal = ExtResource("7_g0tgk")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Dream" type="Sprite2D" parent="GridContainer/dreambutton"]
-position = Vector2(255.00003, 106)
-scale = Vector2(0.5352349, 0.5035544)
-texture = ExtResource("5_mgmts")
+[node name="waterbutton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 346.0
+offset_right = 926.0
+offset_bottom = 556.0
+texture_normal = ExtResource("8_ank4q")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="earthbutton" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-
-[node name="Earth" type="Sprite2D" parent="GridContainer/earthbutton"]
-position = Vector2(430.00003, 101)
-scale = Vector2(0.5283332, 0.48895347)
-texture = ExtResource("6_alv65")
-
-[node name="firebutton" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-
-[node name="Fire" type="Sprite2D" parent="GridContainer/firebutton"]
-position = Vector2(606.00006, 95)
-scale = Vector2(0.52649003, 0.5000001)
-texture = ExtResource("7_g0tgk")
-
-[node name="waterbutton" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-
-[node name="Water" type="Sprite2D" parent="GridContainer/waterbutton"]
-position = Vector2(783.00006, 92.00006)
-scale = Vector2(0.53311276, 0.5011848)
-texture = ExtResource("8_ank4q")
-
-[node name="timebutton" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-
-[node name="Time" type="Sprite2D" parent="GridContainer/timebutton"]
-position = Vector2(957.99994, 87.00003)
-scale = Vector2(0.54166704, 0.50236964)
-texture = ExtResource("9_iioxc")
+[node name="timebutton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 346.0
+offset_right = 1102.0
+offset_bottom = 556.0
+texture_normal = ExtResource("9_iioxc")
+ignore_texture_size = true
+stretch_mode = 0

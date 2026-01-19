@@ -10,14 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Moonlight-Conquest"
-run/main_scene="uid://c4v0f3v150n5x"
+config/name="Moonlight Conquest"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-GameManager="*res://Regular Version/GameManager.gd"
 
 [editor_plugins]
 

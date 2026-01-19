@@ -17,3 +17,11 @@ func _on_regularbutton_pressed() -> void:
 
 func _on_alliedbutton_pressed() -> void:
 	get_tree().change_scene_to_file("res://Allied Version/allied.tscn")
+
+
+func _on_regular_pressed() -> void:
+	get_tree().change_scene_to_file("res://Regular Version/playerone.tscn")
+
+
+func _on_allied_pressed() -> void:
+	get_tree().change_scene_to_file("res://Allied Version/allied.tscn")

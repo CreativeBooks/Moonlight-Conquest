@@ -21,3 +21,7 @@ func _on_optionsbutton_pressed() -> void:
 
 func _on_exitbutton_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_starbutton_pressed() -> void:
+	get_tree().change_scene_to_file("res://Menu Scenes + Script/start.tscn")

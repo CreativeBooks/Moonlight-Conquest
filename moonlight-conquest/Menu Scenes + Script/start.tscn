@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://cocdhbajjf2se"]
+[gd_scene load_steps=11 format=4 uid="uid://cocdhbajjf2se"]
 
 [ext_resource type="Script" uid="uid://f8wjqspf8p27" path="res://Menu Scenes + Script/start.gd" id="1_rb2qs"]
 [ext_resource type="Texture2D" uid="uid://oi2d27njvw1e" path="res://images/Black.png" id="2_7s2ue"]
 [ext_resource type="FontFile" uid="uid://bap8s38lrsrq0" path="res://fonts/Zenzai Itacha.ttf" id="3_l1jle"]
+[ext_resource type="Texture2D" uid="uid://cpxuy1kptbjiy" path="res://images/download(1).png" id="4_7s2ue"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5hus"]
 texture = ExtResource("2_7s2ue")
@@ -2115,6 +2116,7 @@ theme_override_font_sizes/font_size = 74
 text = "Pick a Version"
 
 [node name="Alliedbutton" type="Button" parent="."]
+visible = false
 offset_left = 602.0
 offset_top = 249.0
 offset_right = 929.0
@@ -2139,6 +2141,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_rb2qs")
 text = "Allied"
 
 [node name="regularbutton" type="Button" parent="."]
+visible = false
 offset_left = 242.0
 offset_top = 248.0
 offset_right = 570.0
@@ -2162,5 +2165,47 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4a3qj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7s2ue")
 text = "Regular"
 
+[node name="regular" type="TextureButton" parent="."]
+offset_left = 231.0
+offset_top = 235.0
+offset_right = 589.0
+offset_bottom = 496.0
+texture_normal = ExtResource("4_7s2ue")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="regular"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 72.0
+offset_right = 233.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_l1jle")
+theme_override_font_sizes/font_size = 49
+text = "Regular"
+
+[node name="allied" type="TextureButton" parent="."]
+offset_left = 592.0
+offset_top = 238.0
+offset_right = 950.0
+offset_bottom = 496.0
+texture_normal = ExtResource("4_7s2ue")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="allied"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 72.0
+offset_right = 215.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_l1jle")
+theme_override_font_sizes/font_size = 49
+text = "Allied"
+
 [connection signal="pressed" from="Alliedbutton" to="." method="_on_alliedbutton_pressed"]
 [connection signal="pressed" from="regularbutton" to="." method="_on_regularbutton_pressed"]
+[connection signal="pressed" from="regular" to="." method="_on_regular_pressed"]
+[connection signal="pressed" from="allied" to="." method="_on_allied_pressed"]

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dv67b6s8jxpdi" path="res://images/wmremove-transformed.png" id="5_nfcla"]
 [ext_resource type="Texture2D" uid="uid://bgtddx2kljd4" path="res://images/Screenshot_2026-01-18_at_5.10.18_PM-removebg-preview.png" id="6_75jto"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75jto"]
 texture = ExtResource("1_wtcfe")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -2060,7 +2060,7 @@ texture = ExtResource("1_wtcfe")
 
 [sub_resource type="TileSet" id="TileSet_epypp"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_0hol4")
+sources/0 = SubResource("TileSetAtlasSource_75jto")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_epypp"]
 
@@ -2132,31 +2132,32 @@ theme_override_font_sizes/font_size = 74
 text = "Moonlight Conquest"
 
 [node name="Starbutton" type="TextureButton" parent="."]
-offset_left = 392.0
-offset_top = 234.0
-offset_right = 765.0
-offset_bottom = 336.0
+offset_left = 227.0
+offset_top = 222.0
+offset_right = 552.0
+offset_bottom = 314.0
 texture_normal = ExtResource("5_nfcla")
 texture_hover = ExtResource("6_75jto")
 ignore_texture_size = true
 stretch_mode = 0
+flip_h = true
 
 [node name="Label" type="Label" parent="Starbutton"]
 layout_mode = 0
-offset_left = 140.0
-offset_top = 9.0
-offset_right = 241.0
-offset_bottom = 140.0
+offset_left = 110.0
+offset_top = 2.0
+offset_right = 211.0
+offset_bottom = 133.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_epypp")
 theme_override_font_sizes/font_size = 39
 text = "Start"
 
 [node name="Optionsbutton" type="TextureButton" parent="."]
-offset_left = 393.0
-offset_top = 343.0
-offset_right = 765.0
-offset_bottom = 445.0
+offset_left = 402.0
+offset_top = 319.0
+offset_right = 721.0
+offset_bottom = 409.0
 texture_normal = ExtResource("5_nfcla")
 texture_hover = ExtResource("6_75jto")
 ignore_texture_size = true
@@ -2164,20 +2165,62 @@ stretch_mode = 0
 
 [node name="Label" type="Label" parent="Optionsbutton"]
 layout_mode = 0
-offset_left = 140.0
-offset_top = 10.0
-offset_right = 241.0
-offset_bottom = 141.0
+offset_left = 113.0
+offset_top = 9.0
+offset_right = 214.0
+offset_bottom = 140.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_epypp")
 theme_override_font_sizes/font_size = 39
 text = "Options"
 
+[node name="Backstorybutton" type="TextureButton" parent="."]
+offset_left = 402.0
+offset_top = 511.0
+offset_right = 723.0
+offset_bottom = 596.0
+texture_normal = ExtResource("5_nfcla")
+texture_hover = ExtResource("6_75jto")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Backstorybutton"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 3.0
+offset_right = 246.0
+offset_bottom = 134.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_epypp")
+theme_override_font_sizes/font_size = 36
+text = "Backstory"
+
+[node name="GameRulesbutton" type="TextureButton" parent="."]
+offset_left = 401.0
+offset_top = 416.0
+offset_right = 722.0
+offset_bottom = 501.0
+texture_normal = ExtResource("5_nfcla")
+texture_hover = ExtResource("6_75jto")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="GameRulesbutton"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 9.0
+offset_right = 235.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_epypp")
+theme_override_font_sizes/font_size = 36
+text = "Game Rules"
+
 [node name="Exitbutton" type="TextureButton" parent="."]
-offset_left = 394.0
-offset_top = 451.0
-offset_right = 765.0
-offset_bottom = 553.0
+offset_left = 591.0
+offset_top = 222.0
+offset_right = 910.0
+offset_bottom = 315.0
 texture_normal = ExtResource("5_nfcla")
 texture_hover = ExtResource("6_75jto")
 ignore_texture_size = true
@@ -2185,10 +2228,10 @@ stretch_mode = 0
 
 [node name="Label" type="Label" parent="Exitbutton"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 7.0
-offset_right = 222.0
-offset_bottom = 138.0
+offset_left = 134.0
+offset_top = 9.0
+offset_right = 203.0
+offset_bottom = 140.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_epypp")
 theme_override_font_sizes/font_size = 39
@@ -2267,6 +2310,8 @@ text = "Exit"
 
 [connection signal="pressed" from="Starbutton" to="." method="_on_starbutton_pressed"]
 [connection signal="pressed" from="Optionsbutton" to="." method="_on_optionsbutton_pressed"]
+[connection signal="pressed" from="Backstorybutton" to="." method="_on_backstorybutton_pressed"]
+[connection signal="pressed" from="GameRulesbutton" to="." method="_on_game_rulesbutton_pressed"]
 [connection signal="pressed" from="Exitbutton" to="." method="_on_exitbutton_pressed"]
 [connection signal="pressed" from="VBoxContainer/startbutton" to="." method="_on_startbutton_pressed"]
 [connection signal="pressed" from="VBoxContainer/optionsbutton" to="." method="_on_optionsbutton_pressed"]

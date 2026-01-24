@@ -25,3 +25,11 @@ func _on_exitbutton_pressed() -> void:
 
 func _on_starbutton_pressed() -> void:
 	get_tree().change_scene_to_file("res://Menu Scenes + Script/start.tscn")
+
+
+func _on_game_rulesbutton_pressed() -> void:
+	get_tree().change_scene_to_file("res://Menu Scenes + Script/rules.tscn")
+
+
+func _on_backstorybutton_pressed() -> void:
+	get_tree().change_scene_to_file("res://Menu Scenes + Script/story.tscn")

@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://coa3t1yon53vr"]
+[gd_scene load_steps=12 format=4 uid="uid://t7uayqisxno7"]
 
 [ext_resource type="Script" uid="uid://t87nsd7pg5w8" path="res://Menu Scenes + Script/rules.gd" id="1_2iywj"]
 [ext_resource type="Texture2D" uid="uid://oi2d27njvw1e" path="res://images/Black.png" id="1_e1kr5"]
 [ext_resource type="FontFile" uid="uid://bap8s38lrsrq0" path="res://fonts/Zenzai Itacha.ttf" id="2_2iywj"]
 [ext_resource type="FontFile" uid="uid://cmvccrt3msl2c" path="res://fonts/PathwayGothicOne-Regular.ttf" id="3_7fihp"]
+[ext_resource type="Texture2D" uid="uid://dv67b6s8jxpdi" path="res://images/wmremove-transformed.png" id="5_3fco4"]
+[ext_resource type="Texture2D" uid="uid://bgtddx2kljd4" path="res://images/Screenshot_2026-01-18_at_5.10.18_PM-removebg-preview.png" id="6_o8vfu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7fihp"]
 texture = ExtResource("1_e1kr5")
@@ -2095,20 +2097,20 @@ theme_override_font_sizes/font_size = 74
 text = "Rules"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 39.0
-offset_top = 100.0
-offset_right = 557.0
-offset_bottom = 695.0
+offset_left = 47.0
+offset_top = 144.0
+offset_right = 565.0
+offset_bottom = 750.0
 theme_override_fonts/font = ExtResource("3_7fihp")
-theme_override_font_sizes/font_size = 23
+theme_override_font_sizes/font_size = 21
 text = "Beginning of round:
 	Assign a realm to each person
 	Combine the downgrade, upgrade, weapons, and characters into 1 deck and distribute 6 to each person
 	Distribute 2 resource cards to each person and then combine both decks
 
-Beginning of each round, roll the dice to decide which family has the advantage
+Beginning of each round, roll the dice to decide which realm has the advantage
 
-Advantageous family starts the round 
+Advantageous realm starts the round 
 	
 	Beginning of turn:
 		If you  have a downgrade or upgrade card, you can play it now but can’t pick up card at end of your turn
@@ -2128,7 +2130,7 @@ offset_top = 137.0
 offset_right = 1104.0
 offset_bottom = 394.0
 theme_override_fonts/font = ExtResource("3_7fihp")
-theme_override_font_sizes/font_size = 23
+theme_override_font_sizes/font_size = 21
 text = "If picked trade: roll dice to pick which realm to trade with and talk in the corner for 20 seconds to decide on trade. Only 1 RESOURCE is traded at a time.
 
 If pick attack: choose a realm to attack, place resource and weapon/character in center
@@ -2136,17 +2138,17 @@ If pick attack: choose a realm to attack, place resource and weapon/character in
 End of Turn:
 		Pick up card from deck if didn’t play any downgrade or upgrade cards at beginning of card
 
-End of Round:
+End of Round: (once every realm has gone)
 	Record all health impacts
-	Draw situation for next the round
-
-
 	
-
+Winning:
+Game ends when army is fully cultivated  (1000 soldiers, 2 training, 3 characters, 4 weapons)
+ second place is realm with most health
 "
 autowrap_mode = 3
 
 [node name="returnbutton" type="Button" parent="."]
+visible = false
 offset_left = 932.0
 offset_top = 9.0
 offset_right = 1139.0
@@ -2158,4 +2160,27 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3fco4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2iywj")
 text = "Return to Main Menu"
 
+[node name="Starbutton" type="TextureButton" parent="."]
+offset_left = 812.0
+offset_top = 6.0
+offset_right = 1137.0
+offset_bottom = 98.0
+texture_normal = ExtResource("5_3fco4")
+texture_hover = ExtResource("6_o8vfu")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="Label" type="Label" parent="Starbutton"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 4.0
+offset_right = 302.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2iywj")
+theme_override_font_sizes/font_size = 39
+text = "Return to Main Menu"
+
 [connection signal="pressed" from="returnbutton" to="." method="_on_returnbutton_pressed"]
+[connection signal="pressed" from="Starbutton" to="." method="_on_starbutton_pressed"]

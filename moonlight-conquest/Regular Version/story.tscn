@@ -2088,3 +2088,12 @@ text = "Solo Backstory:
 
 
 "
+
+[node name="Button" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 24.0
+offset_right = 1126.0
+offset_bottom = 89.0
+text = "Next"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

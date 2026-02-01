@@ -1,13 +1,15 @@
-[gd_scene load_steps=12 format=4 uid="uid://b56vvf1t7sv1f"]
+[gd_scene load_steps=13 format=4 uid="uid://b56vvf1t7sv1f"]
 
 [ext_resource type="Texture2D" uid="uid://oi2d27njvw1e" path="res://images/Black.png" id="1_f48ps"]
+[ext_resource type="Script" uid="uid://nfshj40ku6se" path="res://Regular Version/card.gd" id="1_s3rmf"]
 [ext_resource type="Texture2D" uid="uid://ci4qkx5622w1q" path="res://images/sword.png" id="2_afw2h"]
 [ext_resource type="Texture2D" uid="uid://baiw0md4cp48i" path="res://images/sword1.png" id="3_vj1ej"]
 [ext_resource type="FontFile" uid="uid://djviwgljj2grn" path="res://fonts/Ming Imperial.TTF" id="4_wt1y3"]
 [ext_resource type="FontFile" uid="uid://byuu4qg0k01rq" path="res://fonts/Harukaze.ttf" id="5_s3rmf"]
 [ext_resource type="FontFile" uid="uid://bap8s38lrsrq0" path="res://fonts/Zenzai Itacha.ttf" id="6_a8x5l"]
 [ext_resource type="Texture2D" uid="uid://c7pk6b35plfx4" path="res://images/dragon_sword_damagebar.png" id="7_vj1ej"]
-[ext_resource type="Script" uid="uid://coa7x622eehr3" path="res://Regular Version/CardManager.gd" id="8_wt1y3"]
+[ext_resource type="Texture2D" uid="uid://b51fve6f6ygac" path="res://images/dragondamagebar.png" id="7_wt1y3"]
+[ext_resource type="Texture2D" uid="uid://d3m61k3qul8e5" path="res://images/sword back.png" id="9_s3rmf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qshqb"]
 texture = ExtResource("1_f48ps")
@@ -2064,16 +2066,16 @@ texture = ExtResource("1_f48ps")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qshqb")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3rmf"]
-size = Vector2(295.61807, 415.91873)
-
 [node name="Round1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_s3rmf")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 visible = false
@@ -2082,68 +2084,65 @@ tile_set = SubResource("TileSet_7u3wi")
 
 [node name="Sword" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(331, 341)
-scale = Vector2(0.5, 0.5)
+position = Vector2(329, 442)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_afw2h")
 
-[node name="Card" type="Node2D" parent="."]
-
-[node name="Sword1" type="Sprite2D" parent="Card"]
-position = Vector2(357.125, 386.00003)
-scale = Vector2(1.3666282, 1.3680557)
+[node name="Sword1" type="Sprite2D" parent="."]
+position = Vector2(361, 438)
+scale = Vector2(0.41339496, 0.412413)
 texture = ExtResource("3_vj1ej")
 
-[node name="Label2" type="Label" parent="Card"]
-offset_left = 310.0
-offset_top = 117.0
-offset_right = 526.0
-offset_bottom = 181.0
+[node name="Label2" type="Label" parent="Sword1"]
+offset_left = -34.48268
+offset_top = -196.62943
+offset_right = 181.51732
+offset_bottom = -157.62943
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_wt1y3")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 27
 text = "Molten Fang "
 
-[node name="Label" type="Label" parent="Card"]
-offset_left = 328.0
-offset_top = 75.0
-offset_right = 514.0
-offset_bottom = 139.0
+[node name="Label" type="Label" parent="Sword1"]
+offset_left = -21.311584
+offset_top = -227.32993
+offset_right = 164.68842
+offset_bottom = -163.32993
 theme_override_colors/font_color = Color(0.5762597, 0.10905448, 0.17608708, 1)
 theme_override_fonts/font = ExtResource("5_s3rmf")
-theme_override_font_sizes/font_size = 53
+theme_override_font_sizes/font_size = 39
 text = "Molten Fang "
 
-[node name="Label3" type="Label" parent="Card"]
-offset_left = 337.0
-offset_top = 211.0
-offset_right = 495.0
-offset_bottom = 273.0
+[node name="Label3" type="Label" parent="Sword1"]
+offset_left = -14.726028
+offset_top = -127.91878
+offset_right = 143.27397
+offset_bottom = -65.91878
 theme_override_fonts/font = ExtResource("6_a8x5l")
 theme_override_font_sizes/font_size = 26
 text = "Rank:         2"
 
-[node name="Label4" type="Label" parent="Card"]
-offset_left = 335.0
-offset_top = 157.0
-offset_right = 454.0
-offset_bottom = 219.0
+[node name="Label4" type="Label" parent="Sword1"]
+offset_left = -16.189484
+offset_top = -167.39084
+offset_right = 102.81052
+offset_bottom = -105.39084
 theme_override_fonts/font = ExtResource("6_a8x5l")
 theme_override_font_sizes/font_size = 26
 text = "Realm:      Fire"
 
-[node name="DragonSwordDamagebar" type="Sprite2D" parent="Card"]
+[node name="Dragondamagebar" type="Sprite2D" parent="Sword1"]
+position = Vector2(49.666046, -64.324875)
+scale = Vector2(0.070144765, 0.080838606)
+texture = ExtResource("7_wt1y3")
+
+[node name="DragonSwordDamagebar" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(428.5, 296.67188)
 scale = Vector2(0.0810176, 0.08925829)
 texture = ExtResource("7_vj1ej")
 
-[node name="Area2D" type="Area2D" parent="Card"]
-position = Vector2(357.125, 386.00003)
-scale = Vector2(1.3666282, 1.3680557)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Card/Area2D"]
-position = Vector2(-19.11641, -33.258865)
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_s3rmf")
-
-[node name="CardManager" type="Node2D" parent="."]
-script = ExtResource("8_wt1y3")
+[node name="SwordBack" type="Sprite2D" parent="."]
+position = Vector2(206.00002, 424)
+scale = Vector2(0.23374611, 0.23067632)
+texture = ExtResource("9_s3rmf")

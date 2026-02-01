@@ -2145,9 +2145,9 @@ flip_h = true
 [node name="Label" type="Label" parent="Starbutton"]
 layout_mode = 0
 offset_left = 110.0
-offset_top = 2.0
+offset_top = 5.0
 offset_right = 211.0
-offset_bottom = 133.0
+offset_bottom = 136.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_epypp")
 theme_override_font_sizes/font_size = 39

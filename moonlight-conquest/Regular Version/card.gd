@@ -15,10 +15,6 @@ func _ready():
 	# Make sure the card itself is visible
 	self.visible = true
 	
-	# Debug: print to confirm the script is running
-	print("Card script loaded")
-	print("Card front: ", card_front)
-	print("Card back: ", card_back)
 	
 func flip_card():
 	if is_animating:
@@ -52,7 +48,6 @@ func _finish_animation():
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var mouse_pos = get_global_mouse_position()
-		# Simple click detection (you can make this more precise)
 		if mouse_pos.distance_to(global_position) < 200:
 			flip_card()
 	

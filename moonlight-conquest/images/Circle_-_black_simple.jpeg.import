@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjgewwnr0iara"
-path="res://.godot/imported/dream.png-c0d5dae53e8a0bb68e8455d83dccaa1f.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://bvqpkmnlrdd3e"
+valid=false
 
 [deps]
 
-source_file="res://images/dream.png"
-dest_files=["res://.godot/imported/dream.png-c0d5dae53e8a0bb68e8455d83dccaa1f.ctex"]
+source_file="res://images/Circle_-_black_simple.jpeg"
 
 [params]
 

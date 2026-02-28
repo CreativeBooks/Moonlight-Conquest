@@ -1,53 +1,52 @@
 extends Control
 
-@onready var card_front = $Sword1
-@onready var card_back = $SwordBack
+@onready var card_back = $Sword1
+@onready var card_front = $SwordBack
 @onready var damage_bar = $Sword1/Dragondamagebar
 
-var is_flipped = false
-var is_animating = false
+
+var is_flipped := false
+var is_animating := false
+
 
 func _ready():
-	# Start with card showing the back
-	card_front.visible = false
-	card_back.visible = true
-	
-	# Make sure the card itself is visible
-	self.visible = true
-	
-	
+	card_front.visible = true
+	card_back.visible = false
+
+
+func _input(event):
+	if event is InputEventMouseButton and event.pressed:
+		if not is_animating:
+			flip_card()
+
+
 func flip_card():
-	if is_animating:
-		false
-	
 	is_animating = true
+
 	var tween = create_tween()
-	tween.set_parallel(false)
-	
-	tween.tween_property(self, "scale:x", 0.0, 0.2).set_ease(Tween.EASE_IN)
-	
-	tween.tween_callback(_swap_card_sides)
-	
-	tween.tween_property(self, "scale:x", 1.0, 0.2).set_ease(Tween.EASE_OUT)
-	
-	tween.tween_callback(_finish_animation)
-	
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.set_ease(Tween.EASE_IN_OUT)
+
+#Chate 0.9 to a increased number if the flip isn't as desired
+	tween.tween_property(self, "scale:x", 0.9, 0.15)
+
+	tween.tween_callback(Callable(self, "_swap_sides"))
+
+	tween.tween_property(self, "scale:x", 1.0, 0.15)
+
+	tween.finished.connect(_on_finished)
+
+
+func _swap_sides():
 	is_flipped = !is_flipped
-	
-func _swap_card_sides():
+
 	if is_flipped:
 		card_front.visible = false
 		card_back.visible = true
 	else:
-		card_front.visible = true
 		card_back.visible = false
-		
-func _finish_animation():
+		card_front.visible = true
+
+
+func _on_finished():
 	is_animating = false
-	
-func _input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		var mouse_pos = get_global_mouse_position()
-		if mouse_pos.distance_to(global_position) < 200:
-			flip_card()
-	

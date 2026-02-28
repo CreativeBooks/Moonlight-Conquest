@@ -2064,43 +2064,43 @@ sources/0 = SubResource("TileSetAtlasSource_75jto")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_epypp"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epypp"]
-bg_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w41wq"]
+bg_color = Color(0.054902, 0.168627, 0.172549, 1)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
 corner_radius_bottom_left = 9
-shadow_color = Color(0.6666667, 0.90588236, 0.91764706, 1)
+shadow_color = Color(0.0901961, 0.0980392, 0.0901961, 1)
 shadow_size = 7
 shadow_offset = Vector2(5, 5)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w41wq"]
-bg_color = Color(0.05490196, 0.16862746, 0.17254902, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epypp"]
+bg_color = Color(0.99558, 0.99558, 0.99558, 1)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
 corner_radius_bottom_left = 9
-shadow_color = Color(0.09019608, 0.09803922, 0.09019608, 1)
+shadow_color = Color(0.666667, 0.905882, 0.917647, 1)
 shadow_size = 7
 shadow_offset = Vector2(5, 5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfcla"]
-bg_color = Color(0.05490196, 0.16862746, 0.17254902, 1)
+bg_color = Color(0.054902, 0.168627, 0.172549, 1)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
 corner_radius_bottom_left = 9
-shadow_color = Color(0.09019608, 0.09803922, 0.09019608, 1)
+shadow_color = Color(0.0901961, 0.0980392, 0.0901961, 1)
 shadow_size = 7
 shadow_offset = Vector2(5, 5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75jto"]
-bg_color = Color(0.05490196, 0.16862746, 0.17254902, 1)
+bg_color = Color(0.054902, 0.168627, 0.172549, 1)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
 corner_radius_bottom_left = 9
-shadow_color = Color(0.09019608, 0.09803922, 0.09019608, 1)
+shadow_color = Color(0.0901961, 0.0980392, 0.0901961, 1)
 shadow_size = 7
 shadow_offset = Vector2(5, 5)
 
@@ -2126,7 +2126,7 @@ offset_left = 385.0
 offset_top = 49.0
 offset_right = 779.0
 offset_bottom = 225.0
-theme_override_colors/font_color = Color(0.6653114, 0.9046381, 0.9160945, 1)
+theme_override_colors/font_color = Color(0.665311, 0.904638, 0.916094, 1)
 theme_override_fonts/font = ExtResource("3_epypp")
 theme_override_font_sizes/font_size = 74
 text = "Moonlight Conquest"
@@ -2226,65 +2226,65 @@ theme_override_constants/separation = 15
 
 [node name="startbutton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
-theme_override_colors/font_focus_color = Color(0.9166396, 0.91664004, 0.91663957, 1)
-theme_override_colors/font_pressed_color = Color(0.89492244, 0.89492244, 0.8949224, 1)
+theme_override_colors/font_disabled_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.962546, 0.962546, 0.962546, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.96254605, 0.96254593, 0.96254593, 1)
-theme_override_colors/font_disabled_color = Color(0.6666667, 0.90588236, 0.91764706, 1)
-theme_override_colors/font_outline_color = Color(0.6666667, 0.90588236, 0.91764706, 1)
-theme_override_colors/icon_normal_color = Color(0.6666667, 0.90588236, 0.91764706, 1)
-theme_override_colors/icon_focus_color = Color(0.6666667, 0.90588236, 0.91764706, 1)
-theme_override_colors/icon_pressed_color = Color(0.6666667, 0.90588236, 0.91764706, 1)
-theme_override_colors/icon_hover_color = Color(0.6666667, 0.90588236, 0.91764706, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0.6666667, 0.90588236, 0.91764706, 1)
-theme_override_colors/icon_disabled_color = Color(0.4487121, 0.4487121, 0.4487121, 0.4)
+theme_override_colors/icon_disabled_color = Color(0.448712, 0.448712, 0.448712, 0.4)
+theme_override_colors/icon_hover_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_hover_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_focus_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_normal_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/font_outline_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/font_color = Color(0.0338533, 0.0338533, 0.0338533, 1)
+theme_override_colors/font_focus_color = Color(0.91664, 0.91664, 0.91664, 1)
+theme_override_colors/font_pressed_color = Color(0.894922, 0.894922, 0.894922, 1)
 theme_override_fonts/font = ExtResource("3_epypp")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_epypp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w41wq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_epypp")
 text = "Start"
 
 [node name="optionsbutton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
-theme_override_colors/font_focus_color = Color(0.9471994, 0.9471994, 0.9471994, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/icon_disabled_color = Color(0.448712, 0.448712, 0.448712, 0.4)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_disabled_color = Color(0.4487121, 0.4487121, 0.4487121, 0.4)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.0338533, 0.0338533, 0.0338533, 1)
+theme_override_colors/font_focus_color = Color(0.947199, 0.947199, 0.947199, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_epypp")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_epypp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nfcla")
+theme_override_styles/normal = SubResource("StyleBoxFlat_epypp")
 text = "Options"
 
 [node name="exitbutton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
-theme_override_colors/font_focus_color = Color(0.9471994, 0.9471994, 0.9471994, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/icon_disabled_color = Color(0.448712, 0.448712, 0.448712, 0.4)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_disabled_color = Color(0.4487121, 0.4487121, 0.4487121, 0.4)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.0338533, 0.0338533, 0.0338533, 1)
+theme_override_colors/font_focus_color = Color(0.947199, 0.947199, 0.947199, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_epypp")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_epypp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_75jto")
+theme_override_styles/normal = SubResource("StyleBoxFlat_epypp")
 text = "Exit"
 
 [connection signal="pressed" from="Starbutton" to="." method="_on_starbutton_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://b56vvf1t7sv1f"]
+[gd_scene load_steps=15 format=4 uid="uid://b56vvf1t7sv1f"]
 
 [ext_resource type="Texture2D" uid="uid://oi2d27njvw1e" path="res://images/Black.png" id="1_f48ps"]
 [ext_resource type="Script" uid="uid://nfshj40ku6se" path="res://Regular Version/card.gd" id="1_s3rmf"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://baiw0md4cp48i" path="res://images/sword1.png" id="3_vj1ej"]
 [ext_resource type="Texture2D" uid="uid://diupweo8r8e3d" path="res://images/Circle_-_black_simple.svg" id="4_a8x5l"]
 [ext_resource type="FontFile" uid="uid://djviwgljj2grn" path="res://fonts/Ming Imperial.TTF" id="4_wt1y3"]
+[ext_resource type="Script" uid="uid://cdqgf05myf5ce" path="res://Regular Version/table.gd" id="5_qshqb"]
 [ext_resource type="FontFile" uid="uid://byuu4qg0k01rq" path="res://fonts/Harukaze.ttf" id="5_s3rmf"]
 [ext_resource type="FontFile" uid="uid://bap8s38lrsrq0" path="res://fonts/Zenzai Itacha.ttf" id="6_a8x5l"]
 [ext_resource type="Texture2D" uid="uid://c7pk6b35plfx4" path="res://images/dragon_sword_damagebar.png" id="7_vj1ej"]
@@ -2091,15 +2092,14 @@ position = Vector2(428.5, 296.672)
 scale = Vector2(0.0810176, 0.0892583)
 texture = ExtResource("7_vj1ej")
 
-[node name="flip" type="AnimationPlayer" parent="."]
-speed_scale = 0.8
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="table" type="Sprite2D" parent="."]
 position = Vector2(542.5, 290.25)
 scale = Vector2(1.014, 0.985)
 texture = ExtResource("4_a8x5l")
+script = ExtResource("5_qshqb")
 
 [node name="Sword1" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(607.5, 301.5)
 scale = Vector2(0.339492, 0.335069)
 texture = ExtResource("3_vj1ej")
@@ -2151,13 +2151,14 @@ position = Vector2(49.666, -64.3249)
 scale = Vector2(0.0701448, 0.0808386)
 texture = ExtResource("7_wt1y3")
 
+[node name="SwordBack" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(601, 292.638)
+scale = Vector2(0.185758, 0.18445)
+texture = ExtResource("9_s3rmf")
+
 [node name="Sword" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(329, 442)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_afw2h")
-
-[node name="SwordBack" type="Sprite2D" parent="."]
-position = Vector2(601, 292.638)
-scale = Vector2(0.185758, 0.18445)
-texture = ExtResource("9_s3rmf")

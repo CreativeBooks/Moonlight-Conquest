@@ -1,5 +1,6 @@
 extends Control
 
+
 @onready var card_back = $Sword1
 @onready var card_front = $SwordBack
 @onready var damage_bar = $Sword1/Dragondamagebar

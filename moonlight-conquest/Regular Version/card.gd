@@ -1,9 +1,9 @@
 extends Control
 
 
-@onready var card_back = $Sword1
-@onready var card_front = $SwordBack
-@onready var damage_bar = $Sword1/Dragondamagebar
+@onready var card_back = $deck/card1/Sword1
+@onready var card_front = $deck/card1/SwordBack
+@onready var damage_bar = $deck/card1/Sword1/Dragondamagebar
 
 
 var is_flipped := false

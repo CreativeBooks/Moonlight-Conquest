@@ -2117,6 +2117,14 @@ position = Vector2(618.181, 283.983)
 scale = Vector2(0.16043, 0.154631)
 texture = ExtResource("9_s3rmf")
 
+[node name="Label" type="Label" parent="deck/deckpile"]
+offset_left = -163.193
+offset_top = -51.6254
+offset_right = 166.807
+offset_bottom = 138.375
+theme_override_font_sizes/font_size = 139
+text = "Deck"
+
 [node name="card1" type="Node2D" parent="deck"]
 script = ExtResource("7_ridx4")
 

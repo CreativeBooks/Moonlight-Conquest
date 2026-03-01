@@ -1,10 +1,10 @@
 extends Node2D
-@export var card_name = "blank"
-@export var realm = "water"
-@export var rank = 1
-@onready var card_back = $Sword2
+@export var card_name = "blank2"
+@export var realm = "fire"
+@export var rank = 3
+@onready var card_back = $Sword4
 @onready var card_front = $SwordBack
-@onready var damage_bar = $Sword2/Dragondamagebar
+@onready var damage_bar = $Sword4/Dragondamagebar
 var is_flipped := false
 var is_animating := false
 
@@ -19,11 +19,12 @@ func _input(event):
 		return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		var mouse_pos = get_global_mouse_position()
-		var rect = $Sword2.get_global_transform() * $Sword2.get_rect()
+		var rect = $Sword4.get_global_transform() * $Sword4.get_rect()
 		if rect.has_point(mouse_pos):
 			if not is_animating:
 				flip_card()
 				get_viewport().set_input_as_handled()
+
 func flip_card():
 	is_animating = true
 	var tween = create_tween()

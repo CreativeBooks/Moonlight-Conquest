@@ -12,15 +12,19 @@ func _ready():
 	card_front.visible = true
 	card_back.visible = false
 
+var is_drawn := false  # Add this at the top
+
 func _input(event):
+	if not is_drawn:  # Can't flip if not drawn yet
+		return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		var mouse_pos = get_global_mouse_position()
 		var rect = $Sword1.get_global_transform() * $Sword1.get_rect()
-		if rect.has_point(mouse_pos):  # Only flip THIS card if clicked
+		if rect.has_point(mouse_pos):
 			if not is_animating:
 				flip_card()
-				get_viewport().set_input_as_handled()  # Prevents other cards from also receiving the click
-
+				get_viewport().set_input_as_handled()
+				
 func flip_card():
 	is_animating = true
 	var tween = create_tween()

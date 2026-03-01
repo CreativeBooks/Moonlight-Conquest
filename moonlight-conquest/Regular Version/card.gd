@@ -5,7 +5,7 @@ extends Control
 func _ready():
 	pass  # cards handle their own flipping via _input
 
-func _input(event):
+func _input(_event):
 	pass  # also handled by each card
 
 #@onready var card_back = $deck/card1/Sword1

@@ -1,18 +1,26 @@
 extends Node2D
 
 var deck = []
+@onready var card_counter_label = $deckpile/CardCounterLabel
 
 func _ready():
+	print("Deck Ready")
 	print("Circle position: ", get_node("../table").position)
+	if has_node("deckpile/CardCounterLabel"):
+		card_counter_label = get_node("deckpile/CardCounterLabel")
+		print("Card Counter Label Found")
+	else:
+		print("Card Counter Label Not Found")
+	
 	for card in get_children():
-		if card is Sprite2D:  # Skip the deck sprite
+		if card is Sprite2D or card is Label:  # Skip the deck sprite
 			continue
 		deck.append(card)
 		card.visible = false
 	shuffle_deck()
 	print("Deck has ", deck.size(), " cards")
-
-
+	
+	update_card_counter()
 	
 func shuffle_deck():
 	deck.shuffle()
@@ -22,7 +30,14 @@ func draw_card():
 		print("Deck is empty!")
 		return null
 	var card = deck.pop_back()
+	update_card_counter()
 	return card
+
+func update_card_counter():
+	if card_counter_label:
+		var old_text = card_counter_label.text
+		card_counter_label.text = str(deck.size())
+		print("Label updated from '", old_text, "'to '", card_counter_label.text,"'")
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -34,6 +49,7 @@ func _input(event):
 			if card:
 				_reveal_card(card)
 				get_viewport().set_input_as_handled()
+
 
 #func _reveal_card(card):
 	#card.visible = true

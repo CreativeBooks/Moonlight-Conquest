@@ -2116,19 +2116,19 @@ scale = Vector2(0.16043, 0.154631)
 texture = ExtResource("9_s3rmf")
 
 [node name="Label" type="Label" parent="deck/deckpile"]
-offset_left = -169.42624
-offset_top = -122.7625
-offset_right = 160.57376
-offset_bottom = 303.2375
+offset_left = -169.426
+offset_top = -122.762
+offset_right = 160.574
+offset_bottom = 303.237
 theme_override_fonts/font = ExtResource("6_a8x5l")
 theme_override_font_sizes/font_size = 195
 text = "Deck"
 
 [node name="CardCounterLabel" type="Label" parent="deck/deckpile"]
-offset_left = -44.760994
-offset_top = -297.37253
-offset_right = 34.239006
-offset_bottom = 128.62747
+offset_left = -44.761
+offset_top = -297.373
+offset_right = 34.239
+offset_bottom = 128.627
 theme_override_fonts/font = ExtResource("6_a8x5l")
 theme_override_font_sizes/font_size = 195
 text = "7"

@@ -12,12 +12,17 @@ config_version=5
 
 config/name="Moonlight Conquest"
 run/main_scene="uid://c4v0f3v150n5x"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*res://Regular Version/GameManager.gd"
+
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
 
 [editor_plugins]
 

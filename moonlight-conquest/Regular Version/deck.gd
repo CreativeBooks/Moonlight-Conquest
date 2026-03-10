@@ -4,81 +4,93 @@ var deck = []
 @onready var card_counter_label = $deckpile/CardCounterLabel
 
 var player_positions = [
-	Vector2(1221, 150),   # Player 1 - Top
-	Vector2(1750, 350),   # Player 2 - Top Right
-	Vector2(1750, 1050),  # Player 3 - Bottom Right
-	Vector2(1221, 1250),  # Player 4 - Bottom
-	Vector2(690, 1050),   # Player 5 - Bottom Left
-	Vector2(690, 350),    # Player 6 - Top Left
+	Vector2(643.0, -198.392),   # Player 1 - Top
+	Vector2(1002.392, 103.1245),   # Player 2 - Top Right
+	Vector2(981.9742, 661.25),  # Player 3 - Bottom Right
+	Vector2(516.0, 941.6245),  # Player 4 - Bottom
+	Vector2(32.12384, 663.1245),   # Player 5 - Bottom Left
+	Vector2(34.02576, 103.5663),    # Player 6 - Top Left
 ]
 
 var player_hands = {0: [], 1: [], 2: [], 3: [], 4: [], 5: []}
 var card_offset = Vector2(30, 0)
 
 func _ready():
-	print("Deck Ready")
+	print(name, " Ready")
 	
-	# Load this deck's cards
-	_initialize_deck(self)
-	
-	# Wait one frame so deck2 has finished its _ready()
-	await get_tree().process_frame
-	
-	# Grab and merge deck2's cards
-	var deck2_node = get_node("../deck2")
-	if deck2_node:
-		_merge_deck(deck2_node)
-	else:
-		print("deck2 not found!")
-	
-	shuffle_deck()
-	print("Combined deck has ", deck.size(), " cards")
-	update_card_counter()
-	
-	distribute_cards_to_players()
-
-func _initialize_deck(deck_node: Node2D):
-	for card in deck_node.get_children():
+	for card in get_children():
 		if card is Sprite2D or card is Label:
 			continue
 		deck.append(card)
 		card.visible = false
+	
+	print(name, " loaded ", deck.size(), " cards")
+	update_card_counter()
 
-func _merge_deck(other_deck_node: Node2D):
-	print("Merging: ", other_deck_node.name)
-	# Get cards from deck2 via its own deck array
-	var other_cards = other_deck_node.get_deck_cards()
-	for card in other_cards:
-		other_deck_node.remove_child(card)
-		add_child(card)
-		deck.append(card)
-		card.visible = false
-	print("After merge, deck size: ", deck.size())
+	if name == "deck":
+		await get_tree().process_frame  # Ensure deck2 _ready() has run
+		_distribute_then_merge()
 
-func distribute_cards_to_players():
-	print("Distributing 6 cards to each of 6 players...")
-	var cards_needed = 36
+func _distribute_then_merge():
+	var deck2_node = get_node("../deck2")
 
-	if deck.size() < cards_needed:
-		print("Not enough cards! Need ", cards_needed, ", have ", deck.size())
+	# Step 1: deck deals 6 cards to each player
+	print("deck dealing 6 cards to each player...")
+	_deal_cards(self, 6)
+
+	# Step 2: deck2 deals 2 cards to each player
+	if deck2_node:
+		print("deck2 dealing 2 cards to each player...")
+		_deal_cards(deck2_node, 2)
+	else:
+		print("deck2 not found!")
+
+	# Step 3: Merge leftover cards from deck2 into deck
+	if deck2_node:
+		print("Merging remaining deck2 cards into deck...")
+		for card in deck2_node.deck.duplicate():
+			deck2_node.deck.erase(card)
+			deck2_node.remove_child(card)
+			add_child(card)
+			deck.append(card)
+			card.visible = false
+		print("Merged! Combined remaining deck size: ", deck.size())
+
+	shuffle_deck()
+	update_card_counter()
+	print("All done! Remaining cards in deck: ", deck.size())
+
+func _deal_cards(from_deck_node: Node2D, cards_per_player: int):
+	var needed = cards_per_player * 6
+	if from_deck_node.deck.size() < needed:
+		print(from_deck_node.name, " doesn't have enough cards! Need ", needed, ", have ", from_deck_node.deck.size())
 		return
 
-	# Deal round-robin
-	for round1 in range(6):
+	# Round-robin dealing
+	for round in range(cards_per_player):
 		for player_idx in range(6):
-			var card = draw_card()
+			var card = from_deck_node.deck.pop_back()
+			from_deck_node.update_card_counter()
 			if card:
 				player_hands[player_idx].append(card)
 				_place_card_in_hand(card, player_idx, player_hands[player_idx].size() - 1)
 
-	print("Distribution complete!")
+	print(from_deck_node.name, " dealt ", cards_per_player, " cards to each player")
+	for p in player_hands:
+		print("  Player ", p + 1, ": ", player_hands[p].size(), " cards total")
 
 func _place_card_in_hand(card, player_idx: int, card_idx: int):
-	var base_pos = player_positions[player_idx]
-	card.global_position = base_pos + card_offset * card_idx
+	card.global_position = player_positions[player_idx] + card_offset * card_idx
 	card.visible = true
+	card.is_drawn = true  # Allow the card to be flipped
 	card.z_index = card_idx + 1
 
+	# Register card in card_slots so it can be cycled
+	var slot = player_idx
+	if not card_slots.has(slot):
+		card_slots[slot] = []
+	card_slots[slot].append(card)
+	
 func shuffle_deck():
 	deck.shuffle()
 
@@ -120,6 +132,7 @@ func _reveal_card(card):
 	var angle = (TAU / 6) * slot - PI / 2
 	var pos = center + Vector2(cos(angle), sin(angle)) * circle_radius
 	card.global_position = pos - card.get_child(0).position
+	print(card.global_position)
 	
 	if not card_slots.has(slot):
 		card_slots[slot] = []

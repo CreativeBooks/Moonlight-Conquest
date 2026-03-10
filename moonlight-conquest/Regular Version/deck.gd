@@ -41,7 +41,6 @@ func update_card_counter():
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		# Check if deck pile was clicked (using this node's sprite/area)
 		var mouse_pos = get_global_mouse_position()
 		var rect = $deckpile.get_global_transform() * $deckpile.get_rect()
 		if rect.has_point(mouse_pos):
@@ -58,8 +57,8 @@ func _input(event):
 	#card.z_index = 10
 	
 var draw_count = 0  # Track how many cards have been drawn
-var circle_center = Vector2(573.75, 323.875)
-var circle_radius = 270 # Adjust to match your circle's radius
+var circle_center = Vector2(1221, 698)
+var circle_radius = 520 # Adjust to match your circle's radius
 
 var card_slots = {}  # Stores which cards are in each slot
 func _reveal_card(card):

@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwjtv6ji5aaau"]
+
+[ext_resource type="Script" uid="uid://b1awaofbdwuhy" path="res://Regular Version/Weapons Deck/card_7.gd" id="1_uigbw"]
+[ext_resource type="Texture2D" uid="uid://tt4blna2dtn8" path="res://images/sword2.png" id="2_r7k1k"]
+[ext_resource type="FontFile" uid="uid://djviwgljj2grn" path="res://fonts/Ming Imperial.TTF" id="3_peeis"]
+[ext_resource type="FontFile" uid="uid://byuu4qg0k01rq" path="res://fonts/Harukaze.ttf" id="4_3qscb"]
+[ext_resource type="FontFile" uid="uid://bap8s38lrsrq0" path="res://fonts/Zenzai Itacha.ttf" id="5_8jas8"]
+[ext_resource type="Texture2D" uid="uid://onotoymca2kk" path="res://images/sword2damagebar.png" id="6_0oo7e"]
+[ext_resource type="Texture2D" uid="uid://d3m61k3qul8e5" path="res://images/sword back.png" id="7_7krck"]
+
+[node name="PhantomMoon" type="Node2D"]
+script = ExtResource("1_uigbw")
+
+[node name="Sword7" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(479.50012, 281.50018)
+scale = Vector2(0.1482238, 0.14386788)
+texture = ExtResource("2_r7k1k")
+
+[node name="Label2" type="Label" parent="Sword7"]
+offset_left = -47.646423
+offset_top = -257.1803
+offset_right = 272.35358
+offset_bottom = -199.1803
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_peeis")
+theme_override_font_sizes/font_size = 52
+text = "Molten Fang "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Sword7"]
+offset_left = -6.806791
+offset_top = -298.88538
+offset_right = 222.1932
+offset_bottom = -221.88538
+theme_override_colors/font_color = Color(0.83137256, 0.6666667, 1, 1)
+theme_override_fonts/font = ExtResource("4_3qscb")
+theme_override_font_sizes/font_size = 64
+text = "Phantom Moon"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Sword7"]
+offset_left = 14.694458
+offset_top = -113.446106
+offset_right = 187.69446
+offset_bottom = -15.446106
+theme_override_fonts/font = ExtResource("5_8jas8")
+theme_override_font_sizes/font_size = 41
+text = "Rank:         3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Sword7"]
+offset_left = 6.806532
+offset_top = -187.67223
+offset_right = 228.80653
+offset_bottom = -89.672226
+theme_override_fonts/font = ExtResource("5_8jas8")
+theme_override_font_sizes/font_size = 41
+text = "Realm:      Dream"
+metadata/_edit_use_anchors_ = true
+
+[node name="Dragondamagebar" type="Sprite2D" parent="Sword7"]
+position = Vector2(115.7125, 13.901728)
+scale = Vector2(0.15378146, 0.16002479)
+texture = ExtResource("6_0oo7e")
+
+[node name="SwordBack" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(479.49673, 283.46762)
+scale = Vector2(0.16398618, 0.158213)
+texture = ExtResource("7_7krck")

@@ -1,7 +1,7 @@
 extends Node2D
-@export var card_name = "blank1"
-@export var realm = "air"
-@export var rank = 5
+@export var card_name = "Phantom Moon"
+@export var realm = "Dream"
+@export var rank = 3
 @onready var card_back = $Sword7
 @onready var card_front = $SwordBack
 @onready var damage_bar = $Sword7/Dragondamagebar

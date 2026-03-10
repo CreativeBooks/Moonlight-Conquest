@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://cib831tl3akts"]
+
+[ext_resource type="Texture2D" uid="uid://pfuitpa8pdes" path="res://images/moltenfang.png" id="1_uya3q"]
+[ext_resource type="Script" uid="uid://bcfd4xr52kcn2" path="res://Regular Version/Weapons Deck/molten_fang.gd" id="1_yhe3f"]
+[ext_resource type="FontFile" uid="uid://djviwgljj2grn" path="res://fonts/Ming Imperial.TTF" id="2_yhe3f"]
+[ext_resource type="FontFile" uid="uid://byuu4qg0k01rq" path="res://fonts/Harukaze.ttf" id="3_bys6x"]
+[ext_resource type="FontFile" uid="uid://bap8s38lrsrq0" path="res://fonts/Zenzai Itacha.ttf" id="4_whx3o"]
+[ext_resource type="Texture2D" uid="uid://cqjf8ujk6bgt2" path="res://images/Sword1damagebar.png" id="5_fuqu3"]
+[ext_resource type="Texture2D" uid="uid://d3m61k3qul8e5" path="res://images/sword back.png" id="6_hf45e"]
+
+[node name="MoltenFang" type="Node2D"]
+script = ExtResource("1_yhe3f")
+
+[node name="Sword1" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(570.5, 286.78494)
+scale = Vector2(0.25725347, 0.24814875)
+texture = ExtResource("1_uya3q")
+
+[node name="Label2" type="Label" parent="Sword1"]
+offset_left = -68.02631
+offset_top = -273.1625
+offset_right = 1345.9736
+offset_bottom = -16.162506
+scale = Vector2(0.201, 0.195)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_yhe3f")
+theme_override_font_sizes/font_size = 230
+text = "Molten Fang "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Sword1"]
+offset_left = -25.266909
+offset_top = -309.43112
+offset_right = 956.7331
+offset_bottom = 21.568878
+scale = Vector2(0.201, 0.195)
+theme_override_colors/font_color = Color(0.57626, 0.109054, 0.176087, 1)
+theme_override_fonts/font = ExtResource("3_bys6x")
+theme_override_font_sizes/font_size = 280
+text = "Molten Fang "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Sword1"]
+offset_left = 7.294285
+offset_top = -177.27274
+offset_right = 606.2943
+offset_bottom = 154.72726
+scale = Vector2(0.201, 0.195)
+theme_override_fonts/font = ExtResource("4_whx3o")
+theme_override_font_sizes/font_size = 170
+text = "Rank:         2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Sword1"]
+offset_left = 5.830784
+offset_top = -216.74475
+offset_right = 653.8308
+offset_bottom = 115.25525
+scale = Vector2(0.201, 0.195)
+theme_override_fonts/font = ExtResource("4_whx3o")
+theme_override_font_sizes/font_size = 170
+text = "Realm:      Fire"
+metadata/_edit_use_anchors_ = true
+
+[node name="Dragondamagebar" type="Sprite2D" parent="Sword1"]
+position = Vector2(100.19595, -74.972015)
+scale = Vector2(0.0995744, 0.095120445)
+texture = ExtResource("5_fuqu3")
+
+[node name="SwordBack" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(573, 271)
+scale = Vector2(0.201, 0.195)
+texture = ExtResource("6_hf45e")

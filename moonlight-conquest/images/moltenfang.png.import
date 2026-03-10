@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baiw0md4cp48i"
-path="res://.godot/imported/sword1.png-8daa35ffd41b486d12cb43bd6e093d4b.ctex"
+uid="uid://pfuitpa8pdes"
+path="res://.godot/imported/moltenfang.png-6c54eb40035a5028b9448ede7a7b5584.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/sword1.png"
-dest_files=["res://.godot/imported/sword1.png-8daa35ffd41b486d12cb43bd6e093d4b.ctex"]
+source_file="res://images/moltenfang.png"
+dest_files=["res://.godot/imported/moltenfang.png-6c54eb40035a5028b9448ede7a7b5584.ctex"]
 
 [params]
 

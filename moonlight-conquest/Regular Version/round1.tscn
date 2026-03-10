@@ -1,25 +1,14 @@
-[gd_scene load_steps=23 format=4 uid="uid://b56vvf1t7sv1f"]
+[gd_scene load_steps=14 format=4 uid="uid://b56vvf1t7sv1f"]
 
 [ext_resource type="Texture2D" uid="uid://oi2d27njvw1e" path="res://images/Black.png" id="1_f48ps"]
 [ext_resource type="Script" uid="uid://nfshj40ku6se" path="res://Regular Version/card.gd" id="1_s3rmf"]
-[ext_resource type="Texture2D" uid="uid://ci4qkx5622w1q" path="res://images/sword.png" id="2_afw2h"]
-[ext_resource type="Texture2D" uid="uid://baiw0md4cp48i" path="res://images/sword1.png" id="3_vj1ej"]
 [ext_resource type="Texture2D" uid="uid://diupweo8r8e3d" path="res://images/Circle_-_black_simple.svg" id="4_a8x5l"]
-[ext_resource type="FontFile" uid="uid://djviwgljj2grn" path="res://fonts/Ming Imperial.TTF" id="4_wt1y3"]
 [ext_resource type="Script" uid="uid://cdqgf05myf5ce" path="res://Regular Version/table.gd" id="5_qshqb"]
-[ext_resource type="FontFile" uid="uid://byuu4qg0k01rq" path="res://fonts/Harukaze.ttf" id="5_s3rmf"]
 [ext_resource type="FontFile" uid="uid://bap8s38lrsrq0" path="res://fonts/Zenzai Itacha.ttf" id="6_a8x5l"]
 [ext_resource type="Script" uid="uid://hptppbs6p1fr" path="res://Regular Version/deck.gd" id="6_krpxq"]
-[ext_resource type="Script" uid="uid://cajbdn2wxa4rr" path="res://Regular Version/card_1.gd" id="7_ridx4"]
-[ext_resource type="Texture2D" uid="uid://c7pk6b35plfx4" path="res://images/dragon_sword_damagebar.png" id="7_vj1ej"]
-[ext_resource type="Texture2D" uid="uid://b51fve6f6ygac" path="res://images/dragondamagebar.png" id="7_wt1y3"]
 [ext_resource type="Texture2D" uid="uid://d3m61k3qul8e5" path="res://images/sword back.png" id="9_s3rmf"]
-[ext_resource type="Script" uid="uid://b6ekuj15jeugh" path="res://Regular Version/card_2.gd" id="14_ridx4"]
-[ext_resource type="Script" uid="uid://ch1es0lwk1s46" path="res://Regular Version/card_3.gd" id="15_scjbt"]
-[ext_resource type="Script" uid="uid://b48f2ikshl3d2" path="res://Regular Version/card_4.gd" id="16_2a3qn"]
-[ext_resource type="Script" uid="uid://deds5g8mdfm7x" path="res://Regular Version/card_5.gd" id="17_2svw3"]
-[ext_resource type="Script" uid="uid://c3et7wn046nbq" path="res://Regular Version/card_6.gd" id="18_cqim6"]
-[ext_resource type="Script" uid="uid://b1awaofbdwuhy" path="res://Regular Version/card_7.gd" id="19_2svw3"]
+[ext_resource type="PackedScene" uid="uid://bwjtv6ji5aaau" path="res://Regular Version/Weapons Deck/Phantom_Moon.tscn" id="9_wt1y3"]
+[ext_resource type="PackedScene" uid="uid://cib831tl3akts" path="res://Regular Version/Weapons Deck/Molten_Fang.tscn" id="18_2a3qn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qshqb"]
 texture = ExtResource("1_f48ps")
@@ -2076,6 +2065,12 @@ texture = ExtResource("1_f48ps")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qshqb")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o4xdl"]
+load_path = "res://.godot/imported/dragon_sword_damagebar.png-fcf34e00724a7a9a01d3e43ee26d1556.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78054"]
+load_path = "res://.godot/imported/sword.png-fba5d48e030aed580c5b3bcf658505f7.ctex"
+
 [node name="Round1" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -2096,11 +2091,11 @@ tile_set = SubResource("TileSet_7u3wi")
 visible = false
 position = Vector2(428.5, 296.672)
 scale = Vector2(0.0810176, 0.0892583)
-texture = ExtResource("7_vj1ej")
+texture = SubResource("CompressedTexture2D_o4xdl")
 
 [node name="table" type="Sprite2D" parent="."]
-position = Vector2(573.75, 323.875)
-scale = Vector2(1.025, 1.0125)
+position = Vector2(1221.0001, 698)
+scale = Vector2(2.0855, 2.04025)
 texture = ExtResource("4_a8x5l")
 script = ExtResource("5_qshqb")
 
@@ -2111,8 +2106,8 @@ script = ExtResource("6_krpxq")
 
 [node name="deckpile" type="Sprite2D" parent="deck"]
 z_index = 5
-position = Vector2(618.181, 283.983)
-scale = Vector2(0.16043, 0.154631)
+position = Vector2(1424, 667)
+scale = Vector2(0.1981424, 0.19082125)
 texture = ExtResource("9_s3rmf")
 
 [node name="Label" type="Label" parent="deck/deckpile"]
@@ -2133,448 +2128,14 @@ theme_override_fonts/font = ExtResource("6_a8x5l")
 theme_override_font_sizes/font_size = 195
 text = "7"
 
-[node name="card1" type="Node2D" parent="deck"]
-script = ExtResource("7_ridx4")
+[node name="MoltenFang" parent="deck" instance=ExtResource("18_2a3qn")]
+position = Vector2(851.0001, 396.00003)
 
-[node name="Sword1" type="Sprite2D" parent="deck/card1"]
-z_index = 1
-position = Vector2(622, 292.5)
-scale = Vector2(0.290993, 0.282986)
-texture = ExtResource("3_vj1ej")
-
-[node name="Label2" type="Label" parent="deck/card1/Sword1"]
-offset_left = -34.4827
-offset_top = -196.629
-offset_right = 181.517
-offset_bottom = -157.629
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_wt1y3")
-theme_override_font_sizes/font_size = 27
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="deck/card1/Sword1"]
-offset_left = -21.3116
-offset_top = -227.33
-offset_right = 164.688
-offset_bottom = -163.33
-theme_override_colors/font_color = Color(0.57626, 0.109054, 0.176087, 1)
-theme_override_fonts/font = ExtResource("5_s3rmf")
-theme_override_font_sizes/font_size = 39
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="deck/card1/Sword1"]
-offset_left = -14.726
-offset_top = -127.919
-offset_right = 143.274
-offset_bottom = -65.9188
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Rank:         2"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="deck/card1/Sword1"]
-offset_left = -16.1895
-offset_top = -167.391
-offset_right = 102.811
-offset_bottom = -105.391
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Realm:      Fire"
-metadata/_edit_use_anchors_ = true
-
-[node name="Dragondamagebar" type="Sprite2D" parent="deck/card1/Sword1"]
-position = Vector2(49.666, -64.3249)
-scale = Vector2(0.0701448, 0.0808386)
-texture = ExtResource("7_wt1y3")
-
-[node name="SwordBack" type="Sprite2D" parent="deck/card1"]
-z_index = 2
-position = Vector2(616.5, 284.5)
-scale = Vector2(0.162539, 0.158213)
-texture = ExtResource("9_s3rmf")
-
-[node name="card2" type="Node2D" parent="deck"]
-position = Vector2(138, 1)
-script = ExtResource("14_ridx4")
-
-[node name="Sword2" type="Sprite2D" parent="deck/card2"]
-z_index = 1
-position = Vector2(485, 291)
-scale = Vector2(0.290993, 0.282986)
-texture = ExtResource("3_vj1ej")
-
-[node name="Label2" type="Label" parent="deck/card2/Sword2"]
-offset_left = -34.4827
-offset_top = -196.629
-offset_right = 181.517
-offset_bottom = -157.629
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_wt1y3")
-theme_override_font_sizes/font_size = 27
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="deck/card2/Sword2"]
-offset_left = -21.3116
-offset_top = -227.33
-offset_right = 164.688
-offset_bottom = -163.33
-theme_override_colors/font_color = Color(0.57626, 0.109054, 0.176087, 1)
-theme_override_fonts/font = ExtResource("5_s3rmf")
-theme_override_font_sizes/font_size = 39
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="deck/card2/Sword2"]
-offset_left = -14.726
-offset_top = -127.919
-offset_right = 143.274
-offset_bottom = -65.9188
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Rank:         2"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="deck/card2/Sword2"]
-offset_left = -16.1895
-offset_top = -167.391
-offset_right = 102.811
-offset_bottom = -105.391
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Realm:      Fire"
-metadata/_edit_use_anchors_ = true
-
-[node name="Dragondamagebar" type="Sprite2D" parent="deck/card2/Sword2"]
-position = Vector2(49.666, -64.3249)
-scale = Vector2(0.0701448, 0.0808386)
-texture = ExtResource("7_wt1y3")
-
-[node name="SwordBack" type="Sprite2D" parent="deck/card2"]
-z_index = 2
-position = Vector2(480, 283)
-scale = Vector2(0.162539, 0.158213)
-texture = ExtResource("9_s3rmf")
-
-[node name="card3" type="Node2D" parent="deck"]
-position = Vector2(138, 1)
-script = ExtResource("15_scjbt")
-
-[node name="Sword3" type="Sprite2D" parent="deck/card3"]
-z_index = 1
-position = Vector2(485, 291)
-scale = Vector2(0.290993, 0.282986)
-texture = ExtResource("3_vj1ej")
-
-[node name="Label2" type="Label" parent="deck/card3/Sword3"]
-offset_left = -34.4827
-offset_top = -196.629
-offset_right = 181.517
-offset_bottom = -157.629
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_wt1y3")
-theme_override_font_sizes/font_size = 27
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="deck/card3/Sword3"]
-offset_left = -21.3116
-offset_top = -227.33
-offset_right = 164.688
-offset_bottom = -163.33
-theme_override_colors/font_color = Color(0.57626, 0.109054, 0.176087, 1)
-theme_override_fonts/font = ExtResource("5_s3rmf")
-theme_override_font_sizes/font_size = 39
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="deck/card3/Sword3"]
-offset_left = -14.726
-offset_top = -127.919
-offset_right = 143.274
-offset_bottom = -65.9188
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Rank:         2"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="deck/card3/Sword3"]
-offset_left = -16.1895
-offset_top = -167.391
-offset_right = 102.811
-offset_bottom = -105.391
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Realm:      Fire"
-metadata/_edit_use_anchors_ = true
-
-[node name="Dragondamagebar" type="Sprite2D" parent="deck/card3/Sword3"]
-position = Vector2(49.666, -64.3249)
-scale = Vector2(0.0701448, 0.0808386)
-texture = ExtResource("7_wt1y3")
-
-[node name="SwordBack" type="Sprite2D" parent="deck/card3"]
-z_index = 2
-position = Vector2(480, 283)
-scale = Vector2(0.162539, 0.158213)
-texture = ExtResource("9_s3rmf")
-
-[node name="card4" type="Node2D" parent="deck"]
-position = Vector2(138, 1)
-script = ExtResource("16_2a3qn")
-
-[node name="Sword4" type="Sprite2D" parent="deck/card4"]
-z_index = 1
-position = Vector2(485, 291)
-scale = Vector2(0.290993, 0.282986)
-texture = ExtResource("3_vj1ej")
-
-[node name="Label2" type="Label" parent="deck/card4/Sword4"]
-offset_left = -34.4827
-offset_top = -196.629
-offset_right = 181.517
-offset_bottom = -157.629
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_wt1y3")
-theme_override_font_sizes/font_size = 27
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="deck/card4/Sword4"]
-offset_left = -21.3116
-offset_top = -227.33
-offset_right = 164.688
-offset_bottom = -163.33
-theme_override_colors/font_color = Color(0.57626, 0.109054, 0.176087, 1)
-theme_override_fonts/font = ExtResource("5_s3rmf")
-theme_override_font_sizes/font_size = 39
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="deck/card4/Sword4"]
-offset_left = -14.726
-offset_top = -127.919
-offset_right = 143.274
-offset_bottom = -65.9188
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Rank:         2"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="deck/card4/Sword4"]
-offset_left = -16.1895
-offset_top = -167.391
-offset_right = 102.811
-offset_bottom = -105.391
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Realm:      Fire"
-metadata/_edit_use_anchors_ = true
-
-[node name="Dragondamagebar" type="Sprite2D" parent="deck/card4/Sword4"]
-position = Vector2(49.666, -64.3249)
-scale = Vector2(0.0701448, 0.0808386)
-texture = ExtResource("7_wt1y3")
-
-[node name="SwordBack" type="Sprite2D" parent="deck/card4"]
-z_index = 2
-position = Vector2(480, 283)
-scale = Vector2(0.162539, 0.158213)
-texture = ExtResource("9_s3rmf")
-
-[node name="card5" type="Node2D" parent="deck"]
-position = Vector2(138, 1)
-script = ExtResource("17_2svw3")
-
-[node name="Sword5" type="Sprite2D" parent="deck/card5"]
-z_index = 1
-position = Vector2(485, 291)
-scale = Vector2(0.290993, 0.282986)
-texture = ExtResource("3_vj1ej")
-
-[node name="Label2" type="Label" parent="deck/card5/Sword5"]
-offset_left = -34.4827
-offset_top = -196.629
-offset_right = 181.517
-offset_bottom = -157.629
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_wt1y3")
-theme_override_font_sizes/font_size = 27
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="deck/card5/Sword5"]
-offset_left = -21.3116
-offset_top = -227.33
-offset_right = 164.688
-offset_bottom = -163.33
-theme_override_colors/font_color = Color(0.57626, 0.109054, 0.176087, 1)
-theme_override_fonts/font = ExtResource("5_s3rmf")
-theme_override_font_sizes/font_size = 39
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="deck/card5/Sword5"]
-offset_left = -14.726
-offset_top = -127.919
-offset_right = 143.274
-offset_bottom = -65.9188
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Rank:         2"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="deck/card5/Sword5"]
-offset_left = -16.1895
-offset_top = -167.391
-offset_right = 102.811
-offset_bottom = -105.391
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Realm:      Fire"
-metadata/_edit_use_anchors_ = true
-
-[node name="Dragondamagebar" type="Sprite2D" parent="deck/card5/Sword5"]
-position = Vector2(49.666, -64.3249)
-scale = Vector2(0.0701448, 0.0808386)
-texture = ExtResource("7_wt1y3")
-
-[node name="SwordBack" type="Sprite2D" parent="deck/card5"]
-z_index = 2
-position = Vector2(480, 283)
-scale = Vector2(0.162539, 0.158213)
-texture = ExtResource("9_s3rmf")
-
-[node name="card6" type="Node2D" parent="deck"]
-position = Vector2(138, 1)
-script = ExtResource("18_cqim6")
-
-[node name="Sword6" type="Sprite2D" parent="deck/card6"]
-z_index = 1
-position = Vector2(485, 291)
-scale = Vector2(0.290993, 0.282986)
-texture = ExtResource("3_vj1ej")
-
-[node name="Label2" type="Label" parent="deck/card6/Sword6"]
-offset_left = -34.4827
-offset_top = -196.629
-offset_right = 181.517
-offset_bottom = -157.629
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_wt1y3")
-theme_override_font_sizes/font_size = 27
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="deck/card6/Sword6"]
-offset_left = -21.3116
-offset_top = -227.33
-offset_right = 164.688
-offset_bottom = -163.33
-theme_override_colors/font_color = Color(0.57626, 0.109054, 0.176087, 1)
-theme_override_fonts/font = ExtResource("5_s3rmf")
-theme_override_font_sizes/font_size = 39
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="deck/card6/Sword6"]
-offset_left = -14.726
-offset_top = -127.919
-offset_right = 143.274
-offset_bottom = -65.9188
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Rank:         2"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="deck/card6/Sword6"]
-offset_left = -16.1895
-offset_top = -167.391
-offset_right = 102.811
-offset_bottom = -105.391
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Realm:      Fire"
-metadata/_edit_use_anchors_ = true
-
-[node name="Dragondamagebar" type="Sprite2D" parent="deck/card6/Sword6"]
-position = Vector2(49.666, -64.3249)
-scale = Vector2(0.0701448, 0.0808386)
-texture = ExtResource("7_wt1y3")
-
-[node name="SwordBack" type="Sprite2D" parent="deck/card6"]
-z_index = 2
-position = Vector2(480, 283)
-scale = Vector2(0.162539, 0.158213)
-texture = ExtResource("9_s3rmf")
-
-[node name="card7" type="Node2D" parent="deck"]
-position = Vector2(138, 1)
-script = ExtResource("19_2svw3")
-
-[node name="Sword7" type="Sprite2D" parent="deck/card7"]
-z_index = 1
-position = Vector2(485, 291)
-scale = Vector2(0.290993, 0.282986)
-texture = ExtResource("3_vj1ej")
-
-[node name="Label2" type="Label" parent="deck/card7/Sword7"]
-offset_left = -34.4827
-offset_top = -196.629
-offset_right = 181.517
-offset_bottom = -157.629
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_wt1y3")
-theme_override_font_sizes/font_size = 27
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="deck/card7/Sword7"]
-offset_left = -21.3116
-offset_top = -227.33
-offset_right = 164.688
-offset_bottom = -163.33
-theme_override_colors/font_color = Color(0.57626, 0.109054, 0.176087, 1)
-theme_override_fonts/font = ExtResource("5_s3rmf")
-theme_override_font_sizes/font_size = 39
-text = "Molten Fang "
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="deck/card7/Sword7"]
-offset_left = -14.726
-offset_top = -127.919
-offset_right = 143.274
-offset_bottom = -65.9188
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Rank:         2"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="deck/card7/Sword7"]
-offset_left = -16.1895
-offset_top = -167.391
-offset_right = 102.811
-offset_bottom = -105.391
-theme_override_fonts/font = ExtResource("6_a8x5l")
-theme_override_font_sizes/font_size = 26
-text = "Realm:      Fire"
-metadata/_edit_use_anchors_ = true
-
-[node name="Dragondamagebar" type="Sprite2D" parent="deck/card7/Sword7"]
-position = Vector2(49.666, -64.3249)
-scale = Vector2(0.0701448, 0.0808386)
-texture = ExtResource("7_wt1y3")
-
-[node name="SwordBack" type="Sprite2D" parent="deck/card7"]
-z_index = 2
-position = Vector2(480, 283)
-scale = Vector2(0.162539, 0.158213)
-texture = ExtResource("9_s3rmf")
+[node name="PhantomMoon" parent="deck" instance=ExtResource("9_wt1y3")]
+position = Vector2(846, 370)
 
 [node name="Sword" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(329, 442)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_afw2h")
+texture = SubResource("CompressedTexture2D_78054")

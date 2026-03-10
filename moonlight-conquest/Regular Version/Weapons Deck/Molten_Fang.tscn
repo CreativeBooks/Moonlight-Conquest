@@ -13,15 +13,15 @@ script = ExtResource("1_yhe3f")
 
 [node name="Sword1" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(570.5, 286.78494)
-scale = Vector2(0.25725347, 0.24814875)
+position = Vector2(578, 336.392)
+scale = Vector2(0.324952, 0.324546)
 texture = ExtResource("1_uya3q")
 
 [node name="Label2" type="Label" parent="Sword1"]
-offset_left = -68.02631
-offset_top = -273.1625
-offset_right = 1345.9736
-offset_bottom = -16.162506
+offset_left = -68.0263
+offset_top = -273.163
+offset_right = 1345.97
+offset_bottom = -16.1625
 scale = Vector2(0.201, 0.195)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_yhe3f")
@@ -30,10 +30,10 @@ text = "Molten Fang "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Sword1"]
-offset_left = -25.266909
-offset_top = -309.43112
-offset_right = 956.7331
-offset_bottom = 21.568878
+offset_left = -25.2669
+offset_top = -309.431
+offset_right = 956.733
+offset_bottom = 21.5689
 scale = Vector2(0.201, 0.195)
 theme_override_colors/font_color = Color(0.57626, 0.109054, 0.176087, 1)
 theme_override_fonts/font = ExtResource("3_bys6x")
@@ -42,10 +42,10 @@ text = "Molten Fang "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="Sword1"]
-offset_left = 7.294285
-offset_top = -177.27274
-offset_right = 606.2943
-offset_bottom = 154.72726
+offset_left = 7.29428
+offset_top = -177.273
+offset_right = 606.294
+offset_bottom = 154.727
 scale = Vector2(0.201, 0.195)
 theme_override_fonts/font = ExtResource("4_whx3o")
 theme_override_font_sizes/font_size = 170
@@ -53,10 +53,10 @@ text = "Rank:         2"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="Sword1"]
-offset_left = 5.830784
-offset_top = -216.74475
-offset_right = 653.8308
-offset_bottom = 115.25525
+offset_left = 5.83078
+offset_top = -216.745
+offset_right = 653.831
+offset_bottom = 115.255
 scale = Vector2(0.201, 0.195)
 theme_override_fonts/font = ExtResource("4_whx3o")
 theme_override_font_sizes/font_size = 170
@@ -64,12 +64,12 @@ text = "Realm:      Fire"
 metadata/_edit_use_anchors_ = true
 
 [node name="Dragondamagebar" type="Sprite2D" parent="Sword1"]
-position = Vector2(100.19595, -74.972015)
-scale = Vector2(0.0995744, 0.095120445)
+position = Vector2(100.196, -74.972)
+scale = Vector2(0.0995744, 0.0951204)
 texture = ExtResource("5_fuqu3")
 
 [node name="SwordBack" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(573, 271)
-scale = Vector2(0.201, 0.195)
+position = Vector2(581, 315.5)
+scale = Vector2(0.25387, 0.252415)
 texture = ExtResource("6_hf45e")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjgewwnr0iara"
-path="res://.godot/imported/dream.png-c0d5dae53e8a0bb68e8455d83dccaa1f.ctex"
+uid="uid://cmf37vxjqly4h"
+path="res://.godot/imported/silver-metal-background-1_78370-324.jpeg-566d17375e5ff0662e699d5773d1be86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/dream.png"
-dest_files=["res://.godot/imported/dream.png-c0d5dae53e8a0bb68e8455d83dccaa1f.ctex"]
+source_file="res://images/silver-metal-background-1_78370-324.jpeg"
+dest_files=["res://.godot/imported/silver-metal-background-1_78370-324.jpeg-566d17375e5ff0662e699d5773d1be86.ctex"]
 
 [params]
 

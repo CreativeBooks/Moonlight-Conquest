@@ -13,15 +13,15 @@ script = ExtResource("1_uigbw")
 
 [node name="Sword7" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(479.50012, 281.50018)
-scale = Vector2(0.1482238, 0.14386788)
+position = Vector2(582.422, 314.117)
+scale = Vector2(0.229149, 0.228498)
 texture = ExtResource("2_r7k1k")
 
 [node name="Label2" type="Label" parent="Sword7"]
-offset_left = -47.646423
-offset_top = -257.1803
-offset_right = 272.35358
-offset_bottom = -199.1803
+offset_left = -47.6464
+offset_top = -257.18
+offset_right = 272.354
+offset_bottom = -199.18
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_peeis")
 theme_override_font_sizes/font_size = 52
@@ -29,43 +29,43 @@ text = "Molten Fang "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Sword7"]
-offset_left = -6.806791
-offset_top = -298.88538
-offset_right = 222.1932
-offset_bottom = -221.88538
-theme_override_colors/font_color = Color(0.83137256, 0.6666667, 1, 1)
+offset_left = -6.80679
+offset_top = -298.885
+offset_right = 222.193
+offset_bottom = -221.885
+theme_override_colors/font_color = Color(0.831373, 0.666667, 1, 1)
 theme_override_fonts/font = ExtResource("4_3qscb")
 theme_override_font_sizes/font_size = 64
 text = "Phantom Moon"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="Sword7"]
-offset_left = 14.694458
-offset_top = -113.446106
-offset_right = 187.69446
-offset_bottom = -15.446106
+offset_left = 14.6945
+offset_top = -113.446
+offset_right = 187.694
+offset_bottom = -15.4461
 theme_override_fonts/font = ExtResource("5_8jas8")
 theme_override_font_sizes/font_size = 41
 text = "Rank:         3"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="Sword7"]
-offset_left = 6.806532
-offset_top = -187.67223
-offset_right = 228.80653
-offset_bottom = -89.672226
+offset_left = 6.80653
+offset_top = -187.672
+offset_right = 228.807
+offset_bottom = -89.6722
 theme_override_fonts/font = ExtResource("5_8jas8")
 theme_override_font_sizes/font_size = 41
 text = "Realm:      Dream"
 metadata/_edit_use_anchors_ = true
 
 [node name="Dragondamagebar" type="Sprite2D" parent="Sword7"]
-position = Vector2(115.7125, 13.901728)
-scale = Vector2(0.15378146, 0.16002479)
+position = Vector2(115.713, 13.9017)
+scale = Vector2(0.153781, 0.160025)
 texture = ExtResource("6_0oo7e")
 
 [node name="SwordBack" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(479.49673, 283.46762)
-scale = Vector2(0.16398618, 0.158213)
+position = Vector2(582, 316.5)
+scale = Vector2(0.250774, 0.25)
 texture = ExtResource("7_7krck")

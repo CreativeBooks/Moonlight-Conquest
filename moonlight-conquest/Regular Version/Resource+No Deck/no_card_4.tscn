@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp3aef8ciu58p"]
+
+[ext_resource type="Script" uid="uid://cy162ia7sc8vf" path="res://Regular Version/Resource+No Deck/no_card_4.gd" id="1_dv527"]
+[ext_resource type="Texture2D" uid="uid://wcum1k3w36tq" path="res://images/nocard_4.png" id="2_pm4sl"]
+[ext_resource type="Texture2D" uid="uid://d3m61k3qul8e5" path="res://images/sword back.png" id="3_j2kat"]
+
+[node name="NoCard4" type="Node2D"]
+script = ExtResource("1_dv527")
+
+[node name="nocard_4" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(705, 316.37555)
+scale = Vector2(0.23774143, 0.23732178)
+texture = ExtResource("2_pm4sl")
+
+[node name="SwordBack" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(701, 319)
+scale = Vector2(0.250774, 0.25)
+texture = ExtResource("3_j2kat")

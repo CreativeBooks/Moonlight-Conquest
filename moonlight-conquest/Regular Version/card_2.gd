@@ -1,6 +1,6 @@
 extends Node2D
-@export var card_name = "blank"
-@export var realm = "water"
+@export var card_name = "Celestial Whisper"
+@export var realm = "air"
 @export var rank = 1
 @onready var card_back = $Sword2
 @onready var card_front = $SwordBack

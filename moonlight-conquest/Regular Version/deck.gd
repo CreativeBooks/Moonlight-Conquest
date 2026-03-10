@@ -58,7 +58,7 @@ func _input(event):
 	
 var draw_count = 0  # Track how many cards have been drawn
 var circle_center = Vector2(1221, 698)
-var circle_radius = 520 # Adjust to match your circle's radius
+var circle_radius = 560 # Adjust to match your circle's radius
 
 var card_slots = {}  # Stores which cards are in each slot
 func _reveal_card(card):

@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7e4sd7onscnp"]
+
+[ext_resource type="Script" uid="uid://b6ekuj15jeugh" path="res://Regular Version/card_2.gd" id="1_6q350"]
+[ext_resource type="Texture2D" uid="uid://djw5wyf4pcxma" path="res://images/sword3.png" id="1_gabmc"]
+[ext_resource type="FontFile" uid="uid://djviwgljj2grn" path="res://fonts/Ming Imperial.TTF" id="2_6q350"]
+[ext_resource type="FontFile" uid="uid://byuu4qg0k01rq" path="res://fonts/Harukaze.ttf" id="3_gs8do"]
+[ext_resource type="FontFile" uid="uid://bap8s38lrsrq0" path="res://fonts/Zenzai Itacha.ttf" id="4_0xac6"]
+[ext_resource type="Texture2D" uid="uid://i6r8plvuw4kl" path="res://images/Sword3damagebar.png" id="5_dcm3w"]
+[ext_resource type="Texture2D" uid="uid://d3m61k3qul8e5" path="res://images/sword back.png" id="6_gspm4"]
+
+[node name="CelestialWhisper" type="Node2D"]
+script = ExtResource("1_6q350")
+
+[node name="Sword2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(562, 314)
+scale = Vector2(0.27060664, 0.26886797)
+texture = ExtResource("1_gabmc")
+
+[node name="Label" type="Label" parent="Sword2"]
+offset_left = -36.953968
+offset_top = -304.9824
+offset_right = 1231.046
+offset_bottom = 26.017609
+scale = Vector2(0.201, 0.195)
+theme_override_colors/font_color = Color(0.65882355, 0.9019608, 0.8117647, 1)
+theme_override_fonts/font = ExtResource("3_gs8do")
+theme_override_font_sizes/font_size = 280
+text = "Celestial Whisper"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Sword2"]
+offset_left = -18.477005
+offset_top = -264.07
+offset_right = 221.523
+offset_bottom = -147.07
+theme_override_fonts/font = ExtResource("2_6q350")
+theme_override_font_sizes/font_size = 50
+text = "Celestial 
+Whisper"
+
+[node name="Label3" type="Label" parent="Sword2"]
+offset_left = 7.294922
+offset_top = -114.04346
+offset_right = 735.2949
+offset_bottom = 288.95654
+scale = Vector2(0.201, 0.195)
+theme_override_fonts/font = ExtResource("4_0xac6")
+theme_override_font_sizes/font_size = 170
+text = "Rank:         1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Sword2"]
+offset_left = 5.8310547
+offset_top = -153.51563
+offset_right = 791.83105
+offset_bottom = 249.48438
+scale = Vector2(0.201, 0.195)
+theme_override_fonts/font = ExtResource("4_0xac6")
+theme_override_font_sizes/font_size = 170
+text = "Realm:      Air"
+metadata/_edit_use_anchors_ = true
+
+[node name="Dragondamagebar" type="Sprite2D" parent="Sword2"]
+position = Vector2(111.78613, -13.736816)
+scale = Vector2(0.13644323, 0.13545139)
+texture = ExtResource("5_dcm3w")
+
+[node name="SwordBack" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(561, 311)
+scale = Vector2(0.25387, 0.252415)
+texture = ExtResource("6_gspm4")

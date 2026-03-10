@@ -2062,16 +2062,6 @@ sources/0 = SubResource("TileSetAtlasSource_y5hus")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qn1rc"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rb2qs"]
-bg_color = Color(0.054902, 0.168627, 0.172549, 1)
-corner_radius_top_left = 9
-corner_radius_top_right = 9
-corner_radius_bottom_right = 9
-corner_radius_bottom_left = 9
-shadow_color = Color(0.0901961, 0.0980392, 0.0901961, 1)
-shadow_size = 7
-shadow_offset = Vector2(5, 5)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4a3qj"]
 bg_color = Color(0.99558, 0.99558, 0.99558, 1)
 corner_radius_top_left = 9
@@ -2079,6 +2069,16 @@ corner_radius_top_right = 9
 corner_radius_bottom_right = 9
 corner_radius_bottom_left = 9
 shadow_color = Color(0.666667, 0.905882, 0.917647, 1)
+shadow_size = 7
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rb2qs"]
+bg_color = Color(0.054902, 0.168627, 0.172549, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_color = Color(0.0901961, 0.0980392, 0.0901961, 1)
 shadow_size = 7
 shadow_offset = Vector2(5, 5)
 
@@ -2107,13 +2107,13 @@ anchor_left = -1.836
 anchor_top = -1.074
 anchor_right = -1.836
 anchor_bottom = -1.074
-offset_left = 913.0
-offset_top = 2.0
-offset_right = 1532.0
-offset_bottom = 332.0
+offset_left = 736.0
+offset_top = 41.0
+offset_right = 1801.0
+offset_bottom = 607.0
 theme_override_colors/font_color = Color(0.665311, 0.904638, 0.916094, 1)
 theme_override_fonts/font = ExtResource("3_l1jle")
-theme_override_font_sizes/font_size = 139
+theme_override_font_sizes/font_size = 239
 text = "Pick a Version"
 
 [node name="Alliedbutton" type="Button" parent="."]
@@ -2122,23 +2122,23 @@ offset_left = 602.0
 offset_top = 249.0
 offset_right = 929.0
 offset_bottom = 479.0
-theme_override_colors/font_disabled_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_colors/icon_disabled_color = Color(0.448712, 0.448712, 0.448712, 0.4)
-theme_override_colors/icon_hover_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/icon_hover_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/icon_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/icon_focus_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/icon_normal_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/font_outline_color = Color(0.666667, 0.905882, 0.917647, 1)
 theme_override_colors/font_color = Color(0.0338533, 0.0338533, 0.0338533, 1)
 theme_override_colors/font_focus_color = Color(0.947199, 0.947199, 0.947199, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/font_outline_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_normal_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_focus_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_hover_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_disabled_color = Color(0.448712, 0.448712, 0.448712, 0.4)
 theme_override_fonts/font = ExtResource("3_l1jle")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/hover = SubResource("StyleBoxFlat_rb2qs")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4a3qj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rb2qs")
 text = "Allied"
 
 [node name="regularbutton" type="Button" parent="."]
@@ -2147,63 +2147,63 @@ offset_left = 242.0
 offset_top = 248.0
 offset_right = 570.0
 offset_bottom = 476.0
-theme_override_colors/font_disabled_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.495539, 0.320015, 0.29533, 1)
-theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_colors/icon_disabled_color = Color(0.448712, 0.448712, 0.448712, 0.4)
-theme_override_colors/icon_hover_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/icon_hover_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/icon_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/icon_focus_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/icon_normal_color = Color(0.666667, 0.905882, 0.917647, 1)
-theme_override_colors/font_outline_color = Color(0.666667, 0.905882, 0.917647, 1)
 theme_override_colors/font_color = Color(0.0338533, 0.0338533, 0.0338533, 1)
 theme_override_colors/font_focus_color = Color(0.947199, 0.947199, 0.947199, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.495539, 0.320015, 0.29533, 1)
+theme_override_colors/font_disabled_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/font_outline_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_normal_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_focus_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_hover_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.666667, 0.905882, 0.917647, 1)
+theme_override_colors/icon_disabled_color = Color(0.448712, 0.448712, 0.448712, 0.4)
 theme_override_fonts/font = ExtResource("3_l1jle")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/hover = SubResource("StyleBoxFlat_7s2ue")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4a3qj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7s2ue")
 text = "Regular"
 
 [node name="regular" type="TextureButton" parent="."]
-offset_left = 685.0
+offset_left = 388.0
 offset_top = 527.0
 offset_right = 1212.0
-offset_bottom = 863.0
+offset_bottom = 1138.0
 texture_normal = ExtResource("4_7s2ue")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="regular"]
 layout_mode = 0
-offset_left = 159.0
-offset_top = 75.0
-offset_right = 356.0
-offset_bottom = 263.0
+offset_left = 238.0
+offset_top = 151.0
+offset_right = 609.0
+offset_bottom = 504.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_l1jle")
-theme_override_font_sizes/font_size = 79
+theme_override_font_sizes/font_size = 149
 text = "Regular"
 
 [node name="allied" type="TextureButton" parent="."]
 offset_left = 1289.0
 offset_top = 528.0
-offset_right = 1814.0
-offset_bottom = 863.0
+offset_right = 2109.0
+offset_bottom = 1121.0
 texture_normal = ExtResource("4_7s2ue")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="allied"]
 layout_mode = 0
-offset_left = 180.0
-offset_top = 67.0
-offset_right = 316.0
-offset_bottom = 255.0
+offset_left = 274.0
+offset_top = 139.0
+offset_right = 531.0
+offset_bottom = 492.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_l1jle")
-theme_override_font_sizes/font_size = 79
+theme_override_font_sizes/font_size = 149
 text = "Allied"
 
 [connection signal="pressed" from="Alliedbutton" to="." method="_on_alliedbutton_pressed"]

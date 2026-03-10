@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://b56vvf1t7sv1f"]
+[gd_scene load_steps=24 format=4 uid="uid://b56vvf1t7sv1f"]
 
 [ext_resource type="Texture2D" uid="uid://oi2d27njvw1e" path="res://images/Black.png" id="1_f48ps"]
 [ext_resource type="Script" uid="uid://nfshj40ku6se" path="res://Regular Version/card.gd" id="1_s3rmf"]
@@ -9,6 +9,13 @@
 [ext_resource type="Script" uid="uid://hptppbs6p1fr" path="res://Regular Version/deck.gd" id="6_krpxq"]
 [ext_resource type="Texture2D" uid="uid://d3m61k3qul8e5" path="res://images/sword back.png" id="9_s3rmf"]
 [ext_resource type="PackedScene" uid="uid://bwjtv6ji5aaau" path="res://Regular Version/Weapons Deck/Phantom_Moon.tscn" id="9_wt1y3"]
+[ext_resource type="PackedScene" uid="uid://b7e4sd7onscnp" path="res://Regular Version/Weapons Deck/Celestial_Whisper.tscn" id="11_a8x5l"]
+[ext_resource type="PackedScene" uid="uid://urcclub6tam0" path="res://Regular Version/Resource+No Deck/no_card_1.tscn" id="12_qshqb"]
+[ext_resource type="PackedScene" uid="uid://dc1ff8xwfb3vi" path="res://Regular Version/Resource+No Deck/no_card_2.tscn" id="13_krpxq"]
+[ext_resource type="PackedScene" uid="uid://lqy8df3w0cvh" path="res://Regular Version/Resource+No Deck/no_card_3.tscn" id="14_ridx4"]
+[ext_resource type="PackedScene" uid="uid://bp3aef8ciu58p" path="res://Regular Version/Resource+No Deck/no_card_4.tscn" id="15_gap4c"]
+[ext_resource type="PackedScene" uid="uid://mlwofjlpqn33" path="res://Regular Version/Resource+No Deck/no_card_5.tscn" id="16_soyb0"]
+[ext_resource type="PackedScene" uid="uid://kcsf37hpy0a6" path="res://Regular Version/Resource+No Deck/no_card_6.tscn" id="17_2a3qn"]
 [ext_resource type="PackedScene" uid="uid://cib831tl3akts" path="res://Regular Version/Weapons Deck/Molten_Fang.tscn" id="18_2a3qn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a8x5l"]
@@ -4905,6 +4912,74 @@ position = Vector2(851, 396)
 
 [node name="PhantomMoon" parent="deck" instance=ExtResource("9_wt1y3")]
 position = Vector2(850, 395)
+
+[node name="CelestialWhisper" parent="deck" instance=ExtResource("11_a8x5l")]
+position = Vector2(871, 403)
+
+[node name="deck2" type="Node2D" parent="."]
+z_index = 2
+position = Vector2(-397, 0)
+script = ExtResource("6_krpxq")
+
+[node name="deckpile" type="Sprite2D" parent="deck2"]
+z_index = 5
+position = Vector2(1432.5, 712)
+scale = Vector2(0.255418, 0.253623)
+texture = ExtResource("9_s3rmf")
+
+[node name="Label" type="Label" parent="deck2/deckpile"]
+offset_left = -169.426
+offset_top = -122.762
+offset_right = 160.574
+offset_bottom = 303.237
+theme_override_fonts/font = ExtResource("6_a8x5l")
+theme_override_font_sizes/font_size = 195
+text = "Deck"
+
+[node name="CardCounterLabel" type="Label" parent="deck2/deckpile"]
+offset_left = -44.761
+offset_top = -297.373
+offset_right = 34.239
+offset_bottom = 128.627
+theme_override_fonts/font = ExtResource("6_a8x5l")
+theme_override_font_sizes/font_size = 195
+text = "7"
+
+[node name="NoCard1" parent="deck2" instance=ExtResource("12_qshqb")]
+position = Vector2(706, 394)
+
+[node name="NoCard2" parent="deck2" instance=ExtResource("13_krpxq")]
+position = Vector2(729, 398)
+
+[node name="NoCard3" parent="deck2" instance=ExtResource("14_ridx4")]
+position = Vector2(727, 396)
+
+[node name="NoCard4" parent="deck2" instance=ExtResource("15_gap4c")]
+position = Vector2(731, 398)
+
+[node name="NoCard5" parent="deck2" instance=ExtResource("16_soyb0")]
+position = Vector2(729, 398)
+
+[node name="NoCard6" parent="deck2" instance=ExtResource("17_2a3qn")]
+position = Vector2(729, 396)
+
+[node name="NoCard7" parent="deck2" instance=ExtResource("12_qshqb")]
+position = Vector2(706, 394)
+
+[node name="NoCard8" parent="deck2" instance=ExtResource("13_krpxq")]
+position = Vector2(729, 398)
+
+[node name="NoCard9" parent="deck2" instance=ExtResource("14_ridx4")]
+position = Vector2(727, 396)
+
+[node name="NoCard10" parent="deck2" instance=ExtResource("15_gap4c")]
+position = Vector2(731, 398)
+
+[node name="NoCard11" parent="deck2" instance=ExtResource("16_soyb0")]
+position = Vector2(729, 398)
+
+[node name="NoCard12" parent="deck2" instance=ExtResource("17_2a3qn")]
+position = Vector2(729, 396)
 
 [node name="Sword" type="Sprite2D" parent="."]
 visible = false

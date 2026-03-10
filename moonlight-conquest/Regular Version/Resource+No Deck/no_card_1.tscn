@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://urcclub6tam0"]
+
+[ext_resource type="Script" uid="uid://ueltmvnw7pks" path="res://Regular Version/Resource+No Deck/no_card_1.gd" id="1_8ajb6"]
+[ext_resource type="Texture2D" uid="uid://kkuplwwfjhir" path="res://images/nocard_1.png" id="2_77qrc"]
+[ext_resource type="Texture2D" uid="uid://d3m61k3qul8e5" path="res://images/sword back.png" id="3_v40vp"]
+
+[node name="NoCard1" type="Node2D"]
+script = ExtResource("1_8ajb6")
+
+[node name="nocard_1" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(724, 316.75)
+scale = Vector2(0.23491009, 0.23408018)
+texture = ExtResource("2_77qrc")
+
+[node name="SwordBack" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(726, 320)
+scale = Vector2(0.250774, 0.25)
+texture = ExtResource("3_v40vp")

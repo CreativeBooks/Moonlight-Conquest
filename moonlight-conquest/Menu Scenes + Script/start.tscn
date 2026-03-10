@@ -2167,10 +2167,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4a3qj")
 text = "Regular"
 
 [node name="regular" type="TextureButton" parent="."]
-offset_left = 866.0
-offset_top = 521.0
-offset_right = 1393.0
-offset_bottom = 857.0
+offset_left = 685.0
+offset_top = 527.0
+offset_right = 1212.0
+offset_bottom = 863.0
 texture_normal = ExtResource("4_7s2ue")
 ignore_texture_size = true
 stretch_mode = 0
@@ -2187,10 +2187,10 @@ theme_override_font_sizes/font_size = 79
 text = "Regular"
 
 [node name="allied" type="TextureButton" parent="."]
-offset_left = 1470.0
-offset_top = 522.0
-offset_right = 1995.0
-offset_bottom = 857.0
+offset_left = 1289.0
+offset_top = 528.0
+offset_right = 1814.0
+offset_bottom = 863.0
 texture_normal = ExtResource("4_7s2ue")
 ignore_texture_size = true
 stretch_mode = 0

@@ -14,10 +14,13 @@ func _ready():
 
 var is_drawn := false  # Add this at the top
 
-func _input(event):
-	if not is_drawn:  # Can't flip if not drawn yet
-		return
+func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if PlayerHandManager.is_in_hand(self):
+			return
+		if not is_drawn:
+			return
+		
 		var mouse_pos = get_global_mouse_position()
 		var rect = $nocard_1.get_global_transform() * $nocard_1.get_rect()
 		if rect.has_point(mouse_pos):

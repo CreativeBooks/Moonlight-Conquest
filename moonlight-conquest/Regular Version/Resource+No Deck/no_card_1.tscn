@@ -10,7 +10,7 @@ script = ExtResource("1_8ajb6")
 [node name="nocard_1" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(724, 316.75)
-scale = Vector2(0.23491009, 0.23408018)
+scale = Vector2(0.23491, 0.23408)
 texture = ExtResource("2_77qrc")
 
 [node name="SwordBack" type="Sprite2D" parent="."]

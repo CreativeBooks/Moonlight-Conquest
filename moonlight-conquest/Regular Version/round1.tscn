@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://b56vvf1t7sv1f"]
+[gd_scene load_steps=26 format=4 uid="uid://b56vvf1t7sv1f"]
 
 [ext_resource type="Texture2D" uid="uid://oi2d27njvw1e" path="res://images/Black.png" id="1_f48ps"]
 [ext_resource type="Script" uid="uid://nfshj40ku6se" path="res://Regular Version/card.gd" id="1_s3rmf"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://mlwofjlpqn33" path="res://Regular Version/Resource+No Deck/no_card_5.tscn" id="16_soyb0"]
 [ext_resource type="PackedScene" uid="uid://kcsf37hpy0a6" path="res://Regular Version/Resource+No Deck/no_card_6.tscn" id="17_2a3qn"]
 [ext_resource type="PackedScene" uid="uid://cib831tl3akts" path="res://Regular Version/Weapons Deck/Molten_Fang.tscn" id="18_2a3qn"]
+[ext_resource type="Script" uid="uid://3kvolj6g5fuk" path="res://Regular Version/canvas_layer.gd" id="18_2svw3"]
+[ext_resource type="PackedScene" uid="uid://h7vdolxx33e1" path="res://Regular Version/HandViewerPopUp.tscn" id="19_cqim6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a8x5l"]
 texture = ExtResource("2_s3rmf")
@@ -4916,114 +4918,6 @@ position = Vector2(850, 395)
 [node name="CelestialWhisper" parent="deck" instance=ExtResource("11_a8x5l")]
 position = Vector2(871, 403)
 
-[node name="MoltenFang2" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="MoltenFang3" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="MoltenFang4" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="MoltenFang5" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="PhantomMoon2" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="PhantomMoon3" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="PhantomMoon4" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="CelestialWhisper2" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="CelestialWhisper3" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="CelestialWhisper4" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="MoltenFang6" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="PhantomMoon5" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="CelestialWhisper5" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="MoltenFang7" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="MoltenFang8" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="MoltenFang9" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="MoltenFang10" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="PhantomMoon6" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="PhantomMoon7" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="PhantomMoon8" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="CelestialWhisper6" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="CelestialWhisper7" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="CelestialWhisper8" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="MoltenFang11" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="PhantomMoon9" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="CelestialWhisper9" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="MoltenFang12" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="MoltenFang13" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="MoltenFang14" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="MoltenFang15" parent="deck" instance=ExtResource("18_2a3qn")]
-position = Vector2(851, 396)
-
-[node name="PhantomMoon10" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="PhantomMoon11" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="PhantomMoon12" parent="deck" instance=ExtResource("9_wt1y3")]
-position = Vector2(850, 395)
-
-[node name="CelestialWhisper10" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="CelestialWhisper11" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
-[node name="CelestialWhisper12" parent="deck" instance=ExtResource("11_a8x5l")]
-position = Vector2(871, 403)
-
 [node name="deck2" type="Node2D" parent="."]
 z_index = 2
 position = Vector2(-397, 0)
@@ -5089,42 +4983,6 @@ position = Vector2(729, 398)
 [node name="NoCard12" parent="deck2" instance=ExtResource("17_2a3qn")]
 position = Vector2(729, 396)
 
-[node name="NoCard13" parent="deck2" instance=ExtResource("12_qshqb")]
-position = Vector2(706, 394)
-
-[node name="NoCard14" parent="deck2" instance=ExtResource("13_krpxq")]
-position = Vector2(729, 398)
-
-[node name="NoCard15" parent="deck2" instance=ExtResource("14_ridx4")]
-position = Vector2(727, 396)
-
-[node name="NoCard16" parent="deck2" instance=ExtResource("15_gap4c")]
-position = Vector2(731, 398)
-
-[node name="NoCard17" parent="deck2" instance=ExtResource("16_soyb0")]
-position = Vector2(729, 398)
-
-[node name="NoCard18" parent="deck2" instance=ExtResource("17_2a3qn")]
-position = Vector2(729, 396)
-
-[node name="NoCard19" parent="deck2" instance=ExtResource("12_qshqb")]
-position = Vector2(706, 394)
-
-[node name="NoCard20" parent="deck2" instance=ExtResource("13_krpxq")]
-position = Vector2(729, 398)
-
-[node name="NoCard21" parent="deck2" instance=ExtResource("14_ridx4")]
-position = Vector2(727, 396)
-
-[node name="NoCard22" parent="deck2" instance=ExtResource("15_gap4c")]
-position = Vector2(731, 398)
-
-[node name="NoCard23" parent="deck2" instance=ExtResource("16_soyb0")]
-position = Vector2(729, 398)
-
-[node name="NoCard24" parent="deck2" instance=ExtResource("17_2a3qn")]
-position = Vector2(729, 396)
-
 [node name="Sword" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(329, 442)
@@ -5133,3 +4991,50 @@ texture = SubResource("CompressedTexture2D_78054")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1210, 155)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("18_2svw3")
+
+[node name="PlayerButton0" type="Button" parent="CanvasLayer"]
+offset_left = 1334.0
+offset_top = 85.0
+offset_right = 1452.0
+offset_bottom = 116.0
+text = "Player 1 Cards"
+
+[node name="PlayerButton1" type="Button" parent="CanvasLayer"]
+offset_left = 1777.0
+offset_top = 374.0
+offset_right = 1895.0
+offset_bottom = 405.0
+text = "Player 2 Cards"
+
+[node name="PlayerButton2" type="Button" parent="CanvasLayer"]
+offset_left = 1869.0
+offset_top = 1029.0
+offset_right = 1987.0
+offset_bottom = 1060.0
+text = "Player 3 Cards"
+
+[node name="PlayerButton3" type="Button" parent="CanvasLayer"]
+offset_left = 1167.0
+offset_top = 1348.0
+offset_right = 1285.0
+offset_bottom = 1379.0
+text = "Player 4 Cards"
+
+[node name="PlayerButton4" type="Button" parent="CanvasLayer"]
+offset_left = 551.0
+offset_top = 1024.0
+offset_right = 669.0
+offset_bottom = 1055.0
+text = "Player 5 Cards"
+
+[node name="PlayerButton5" type="Button" parent="CanvasLayer"]
+offset_left = 543.0
+offset_top = 381.0
+offset_right = 661.0
+offset_bottom = 412.0
+text = "Player 6 Cards"
+
+[node name="PlayerHandviewer" parent="CanvasLayer" instance=ExtResource("19_cqim6")]
